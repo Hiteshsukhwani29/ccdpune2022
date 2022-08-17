@@ -4,13 +4,13 @@ import { initializeApp } from "firebase/app";
 // require('dotenv').config()
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCeb6YO1f4x2FU91SoJKGxRiaQCwZYUfJ4",
-    authDomain: "gdgcp-ccd.firebaseapp.com",
-    projectId: "gdgcp-ccd",
-    storageBucket: "gdgcp-ccd.appspot.com",
-    messagingSenderId: "84693050568",
-    appId: "1:84693050568:web:db63873d4a23ea99ef71fd",
-    measurementId: "G-4S3NVYTEV8"
+    apiKey: "AIzaSyAczTJr6o7456Ldfkf4lrG1VThthAly4FU",
+  authDomain: "gdgpuneccd.firebaseapp.com",
+  projectId: "gdgpuneccd",
+  storageBucket: "gdgpuneccd.appspot.com",
+  messagingSenderId: "983878995335",
+  appId: "1:983878995335:web:a62f8039f4894d56f1d722",
+  measurementId: "G-3HH7WSMSTC"
 }
 
 const app = initializeApp(firebaseConfig)

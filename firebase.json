@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "gdgcp-ccd",
+    "site": "gdgpuneccd",
     "public": "build",
     "ignore": [
       "firebase.json",

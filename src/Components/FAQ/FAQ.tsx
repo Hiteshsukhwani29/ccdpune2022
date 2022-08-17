@@ -22,12 +22,12 @@ const FAQ = () => {
           Find them here. <br />
           <div className="mt-2 w-fit lg:w-3/5">
             For any queries related to sponsorship, please reach out to us at{' '}
-            <a className="no-underline" href="gdgcloudpune@gmail.com">
-              gdgcloudpune@gmail.com
+            <a className="no-underline" href="mailto:contact@gdgcloudpune.com">
+              contact@gdgcloudpune.com
             </a>
             . Any question related to participation can be asked at{' '}
-            <a className="no-underline" href="mailto:gdgcloudpune@gmail.com">
-              gdgcloudpune@gmail.com
+            <a className="no-underline" href="mailto:contact@gdgcloudpune.com">
+            contact@gdgcloudpune.com
             </a>
             .
           </div>
@@ -138,7 +138,7 @@ const FAQ = () => {
             <div className="text-gray-700   pl-3 md:pl-4 lg:pl-6 py-2 space-y-3">
               <p className="mb-2 text-gray-500 ">
                 You can submit your talk/workshop proposal on our{' '}
-                <a href="https://sessionize.com/cloud-community-days">CFP Page</a>.
+                <a href="https://sessionize.com/">CFP Page</a>.
                 The deadline for submitting CFP for this year’s conference is 10th
                 September, however, the earlier you submit, more the chances of us
                 reviewing your submission in depth.

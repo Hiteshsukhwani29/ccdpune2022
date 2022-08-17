@@ -84,7 +84,7 @@ const Hero = () => {
             <p className="text-base mb-4 text-g-gray-8">
               Date: 24<sup className="mr-0.5">th</sup>September
             </p>
-            <div className="lg:w-fit md:w-full grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-4">
+            <div className="lg:w-fit md:w-full grid grid-cols-1 lg:grid-cols-1 gap-x-4 gap-y-3">
               {user ? (
                 applied ? (
                   rejected ? (
@@ -108,7 +108,7 @@ const Hero = () => {
                     className="transition ease-in-out bg-yellow-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
                     // onClick={() => navigate('/ccd2022/rsvp')}
                   >
-                    Registrations will be live soon.!
+                    Registrations Will Be Live Soon.!
                   </button>
                 )
               ) : (
@@ -116,24 +116,27 @@ const Hero = () => {
                   className="transition ease-in-out bg-blue-500 hover:bg-blue-600 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
                   // onClick={signInWithGoogle}
                 >
-                  Registrations will be live soon.!
+                  Registrations Will Be Live Soon.!
                 </button>
               )}
 
+              <p className='text-base mb-0 text-g-gray-8'>Want to be a speaker? Click the button below.</p>
               <a
                 className="transition ease-in-out  bg-gray-500 duration-300 text-center w-fit rounded disabled"
-                href="#"
+                href="https://sessionize.com/"
+                target={'_blank'}
                 aria-disabled={true}
               >
-                <button className="text-white  h-fit w-fit text-base py-2 px-4 rounded disabled">
+                <button className="text-white bg-green-600 h-fit w-fit text-base py-2 px-4 rounded">
                   CFS Open
                 </button>
+                
               </a>
             </div>
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2">
+        <div className="w-full mb-3 lg:w-1/2 lg:mb-0 ">
           <Countdown />
         </div>
       </div>
