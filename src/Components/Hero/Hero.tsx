@@ -106,17 +106,17 @@ const Hero = () => {
                 ) : (
                   <button
                     className="transition ease-in-out bg-yellow-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
-                    onClick={() => navigate('/ccd2022/rsvp')}
+                    // onClick={() => navigate('/ccd2022/rsvp')}
                   >
-                    Apply for Ticket
+                    Registrations will be live soon.!
                   </button>
                 )
               ) : (
                 <button
                   className="transition ease-in-out bg-blue-500 hover:bg-blue-600 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
-                  onClick={signInWithGoogle}
+                  // onClick={signInWithGoogle}
                 >
-                  Reserve Your Seat
+                  Registrations will be live soon.!
                 </button>
               )}
 
@@ -126,7 +126,7 @@ const Hero = () => {
                 aria-disabled={true}
               >
                 <button className="text-white  h-fit w-fit text-base py-2 px-4 rounded disabled">
-                  CFS Closed
+                  CFS Open
                 </button>
               </a>
             </div>

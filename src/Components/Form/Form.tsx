@@ -10,7 +10,6 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 // import { encode as base64_encode } from 'base-64'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-const { register, handleSubmit, formState: { errors } } = useForm();
 const Forms = () => {
   const [name, setName] = useState('')
   const [pronoun, setPronoun] = useState('he/him')
