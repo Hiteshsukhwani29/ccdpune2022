@@ -1,6 +1,6 @@
 import Title from '../Title/Title'
 import 'firebase/firestore'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom'
 import { getFirestore, setDoc, doc } from 'firebase/firestore'
@@ -11,7 +11,107 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 const Forms = () => {
-  const [name, setName] = useState('')
+  // const [name, setName] = useState('')
+  const [inputValues, setInputValue] = useState({
+    fname: "",
+    phone:"",
+  });
+  const [validation, setValidation] = useState({
+    fname: "",
+    phone:"",
+  });
+  function handleChange(name,value) {
+    console.log(name,value)
+    // const { tname, value } = event.target;
+    setInputValue({ ...inputValues, [name]: value });
+  }
+
+  const checkValidation = () => {
+    let errors = validation;
+    const regexpnum = new RegExp('^[0-9]*$');
+    //first Name validation
+    if (!inputValues.fname.trim()) {
+      errors.fname = "First name is required";
+    } 
+    else if(inputValues.fname.length<5){
+      errors.fname = "enter full name"
+    }
+    else {
+      errors.fname = "";
+    }
+    //Phone validation
+    if (!inputValues.phone.trim()) {
+      errors.phone = "Contact is required";
+    } 
+    else if(!regexpnum.test(inputValues.phone)){
+      console.log()
+      errors.phone = "enter Correct Number"
+    }
+    else if(inputValues.phone.length!=10){
+      console.log(inputValues.phone.length)
+      errors.phone = "10 digit number"
+    }
+    else {
+      errors.phone = "";
+    }
+    //last Name validation
+    // if (!inputValues.lName.trim()) {
+    //   errors.lName = "Last name is required";
+    // } else {
+    //   errors.lName = "";
+    // }
+
+    // email validation
+    // const emailCond =
+    //   "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/";
+    // if (!inputValues.email.trim()) {
+    //   errors.email = "Email is required";
+    // } else if (!inputValues.email.match(emailCond)) {
+    //   errors.email = "Please ingress a valid email address";
+    // } else {
+    //   errors.email = "";
+    // }
+
+    //password validation
+    // const cond1 = "/^(?=.*[a-z]).{6,20}$/";
+    // const cond2 = "/^(?=.*[A-Z]).{6,20}$/";
+    // const cond3 = "/^(?=.*[0-9]).{6,20}$/";
+    // const password = inputValues.password;
+    // if (!password) {
+    //   errors.password = "password is required";
+    // } else if (password.length < 6) {
+    //   errors.password = "Password must be longer than 6 characters";
+    // } else if (password.length >= 20) {
+    //   errors.password = "Password must shorter than 20 characters";
+    // } else if (!password.match(cond1)) {
+    //   errors.password = "Password must contain at least one lowercase";
+    // } else if (!password.match(cond2)) {
+    //   errors.password = "Password must contain at least one capital letter";
+    // } else if (!password.match(cond3)) {
+    //   errors.password = "Password must contain at least a number";
+    // } else {
+    //   errors.password = "";
+    // }
+
+    //matchPassword validation
+    // if (!inputValues.confirmPassword) {
+    //   errors.confirmPassword = "Password confirmation is required";
+    // } else if (inputValues.confirmPassword !== inputValues.Password) {
+    //   errors.confirmPassword = "Password does not match confirmation password";
+    // } else {
+    //   errors.password = "";
+    // }
+
+    setValidation(errors);
+  };
+
+  useEffect(() => {
+    checkValidation();
+  }, [inputValues]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   const [pronoun, setPronoun] = useState('he/him')
   const [role, setRole] = useState('Architect')
   // const [experience, setExperience] = useState('false');
@@ -42,13 +142,13 @@ const Forms = () => {
     const db = getFirestore(app)
     // const encodedEmail = base64_encode(email)
     setDoc(doc(db, 'register', user.uid), {
-      name: name,
+      name: inputValues.fname,
       pronoun: pronoun,
       role: role,
       // experience: experience,
       confirm: confirm,
       email: email,
-      contact: contactNumber,
+      contact: inputValues.phone,
       enrolled: enrolled,
       organization: organization,
       city: city,
@@ -83,25 +183,30 @@ const Forms = () => {
               Complete your participant application here and wait for us to get back
               to you on your application status!
             </p>
-            <form action="#" className="space-y-8">
+            <form className="space-y-8" id='registrationForm'
+              action='#'
+              onSubmit={handleSubmit}>
               <div>
                 <label
-                  htmlFor="full_name"
+                  htmlFor="fname"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Full name
                 </label>
                 <input
                   type="text"
-                  id="full_name"
+                  id="fname"
+                  name="fname"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="John Doe"
                   required
-                  onChange={(e) => {
-                    console.log(e.target.value)
-                    setName(e.target.value)
-                  }}
+                  onChange={(e) => handleChange(e.target.name,e.target.value)
+                    // setName(e.target.value)
+                  }
+                  // value={inputValues.fname}
                 />
+                {validation.fname && <p>{validation.fname}</p>}
+                {/* {validation.fname && console.log(validation)} */}
               </div>
               <div>
                 <label
@@ -113,14 +218,15 @@ const Forms = () => {
                 <input
                   type="tel"
                   id="phone"
+                  name ="phone"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="9000000000"
                   required
-                  onChange={(e) => {
-                    console.log(e.target.value)
-                    setContactNumber(e.target.value)
-                  }}
+                  onChange={(e) => handleChange(e.target.name,e.target.value)
+                    // setName(e.target.value)
+                  }
                 />
+                {validation.phone && <p>{validation.phone}</p>}
               </div>
               <div>
                 <label
@@ -489,14 +595,14 @@ const Forms = () => {
               </div>
               <button
                 type="submit"
-                onClick={(e) => RegistrationEvent(e, user)}
+                // onClick={(e) => RegistrationEvent(e, user)}
                 className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
               >
                 Submit
               </button>
               <button
                 type="button"
-                onClick={() => navigate('/ccd2022')}
+                // onClick={() => navigate('/ccd2022')}
                 className="text-black bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
               >
                 Cancel
