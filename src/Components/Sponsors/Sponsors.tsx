@@ -1,3 +1,4 @@
+import cfplogo from '../../Images/sessionize-logo.svg'
 
 const Sponsors = () => {
   return (
@@ -7,11 +8,11 @@ const Sponsors = () => {
       </div>
 
       <p className="mb-4 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
-        We're thankful to all our sponsors who are making CCD 2022 Kolkata amazing. <br />
-        To become a sponsor, please email as at <a href="mailto:partners@gdgcloud.kolkata.dev">partners@gdgcloud.kolkata.dev</a>
+        We're thankful to all our sponsors who are making CCD 2022 Pune amazing. <br />
+        To become a sponsor, please email as at <a href="mailto:contact@gdgcloudpune.com">contact@gdgcloupune.com</a>
       </p>
       <br />
-      <div className="max-w-sm mx-auto">
+      {/* <div className="max-w-sm mx-auto">
         <a href="https://developers.google.com/" className="no-underline" target="_blank">
           <div className="m-8 bg-white overflow-hidden rounded-lg shadow-lg">
             <img className="object-cover object-center w-fit px-4 py-16 mx-auto" src="/ccd2022/sponsors/google-developers.svg" alt="avatar" />
@@ -21,8 +22,8 @@ const Sponsors = () => {
             </div>
           </div>
         </a>
-      </div>
-      <div className="max-w-sm mx-auto">
+      </div> */}
+      {/* <div className="max-w-sm mx-auto">
       <a href="https://wandb.ai" className="no-underline" target="_blank">
         <div className="m-8 bg-white overflow-hidden rounded-lg shadow-lg">
           <img className="object-cover object-center w-fit px-4 py-16 mx-auto" src="/ccd2022/sponsors/wandb.svg" alt="avatar" />
@@ -32,17 +33,17 @@ const Sponsors = () => {
           </div>
         </div>
       </a>
-      </div>
-      <div className="flex justify-center md:justify-start text-2xl lg:text-xl font-light text-g-blue-3 mt-16">
+      </div> */}
+      {/* <div className="flex justify-center md:justify-start text-2xl lg:text-xl font-light text-g-blue-3 mt-16">
         Also backed by
-      </div>
+      </div> */}
 
       <section>
         <div className="relative items-center w-full px-5 mx-auto md:px-12 lg:px-24 max-w-7xl">
           <div className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3">
           <a href="https://sessionize.com" className="no-underline" target="_blank">
             <div className="p-6">
-              <img className="object-cover object-center w-fit mb-8 rounded-xl" src="/ccd2022/sponsors/sessionize.svg" alt="blog" />
+              <img className="object-cover object-center w-fit mb-8 rounded-xl" src={cfplogo} alt="blog" />
               <h2 className="mb-8 text-xs font-semibold tracking-widest text-blue-600 uppercase">CFP Platform Sponsor</h2>
             </div>
           </a>

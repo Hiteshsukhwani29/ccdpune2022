@@ -136,11 +136,11 @@ const FAQ = () => {
             style={selectedfaq === 3 ? { maxHeight: '240px' } : { maxHeight: '0px' }}
           >
             <div className="text-gray-700   pl-3 md:pl-4 lg:pl-6 py-2 space-y-3">
-              <p className="mb-2 text-gray-500 ">
+              <p className="mb-2 text-gray-500">
                 You can submit your talk/workshop proposal on our{' '}
-                <a href="https://sessionize.com/">CFP Page</a>.
-                The deadline for submitting CFP for this year’s conference is 10th
-                September, however, the earlier you submit, more the chances of us
+                <a href="https://sessionize.com/ccd-pune">CFP Page</a>.
+                The deadline for submitting CFP for this year’s conference is 31st
+                August, however, the earlier you submit, more the chances of us
                 reviewing your submission in depth.
               </p>
             </div>
@@ -172,7 +172,10 @@ const FAQ = () => {
           </div>
         </div>
       </div>
+      <div>
+      </div>
     </div>
+    
   )
 }
 

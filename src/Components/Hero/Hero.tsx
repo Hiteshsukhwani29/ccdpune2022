@@ -123,7 +123,7 @@ const Hero = () => {
               <p className='text-base mb-0 text-g-gray-8'>Want to be a speaker? Click the button below.</p>
               <a
                 className="transition ease-in-out  bg-gray-500 duration-300 text-center w-fit rounded disabled"
-                href="https://sessionize.com/"
+                href="https://sessionize.com/ccd-pune"
                 target={'_blank'}
                 aria-disabled={true}
               >

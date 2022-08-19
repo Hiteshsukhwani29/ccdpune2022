@@ -18,8 +18,8 @@ const Home = () => {
       {/* <Team /> */}
       <Coc />
       <FAQ />
-      {/* <Sponsors /> */}
-      {/* <Partners /> */}
+      <Sponsors /> 
+       {/* <Partners /> */}
     </>
   )
 }

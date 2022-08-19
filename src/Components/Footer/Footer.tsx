@@ -177,7 +177,7 @@ const Footer = () => {
               </p> */}
               <p className="mb-2">
                 <a
-                  href="https://sessionize.com/"
+                  href="https://sessionize.com/ccd-pune"
                   className="text-g-gray-7 font-light no-underline"
                   target={'_blank'}
                   rel="noreferrer"
