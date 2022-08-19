@@ -13,13 +13,13 @@ const About = () => {
             Google Cloud Certifications from the industry experts at the Cloud
             Community Day India 2022. Our experts will tell you how Google Cloud
             Platform and Google Cloud Certifications can help you in accelerating
-            your career by boosting your knowledge. During this 2 days event, you’ll
-            also stand a chance to win exciting prizes and heavy discounts coupons on
+            your career by boosting your knowledge. During this event, you’ll
+            also stand a chance to win exciting prizes and gain insights on
             Google Cloud Certifications.
           </p>
           <a
             className=" bg-transparent border-2 text-white  h-fit w-fit text-base py-2 px-4 rounded text-center no-underline"
-            href="https://sessionize.com/cloud-community-days"
+            href="https://sessionize.com/ccd-pune"
             target={'_blank'}
             rel="noreferrer"
           >
