@@ -1,6 +1,6 @@
 import Title from '../Title/Title'
 import 'firebase/firestore'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom'
 import { getFirestore, setDoc, doc } from 'firebase/firestore'
@@ -11,25 +11,132 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 const Forms = () => {
-  const [name, setName] = useState('')
+  // const [name, setName] = useState('')
+  const regexpnum = new RegExp('^\\d{10}$');
+  const [inputValues, setInputValue] = useState({
+    fname: "",
+    phone:"",
+    pronoun:"",
+    organization:"",
+    city:"",
+    about:"",
+    linkedin:"",
+    github:"",
+  });
+  const [validation, setValidation] = useState({
+    fname: "",
+    phone:"",
+    pronoun:"",
+    organization:"",
+    city:"",
+    about:"",
+    linkedin:"",
+    github:"",
+    confirm:"",
+    understand:"",
+  });
+  function handleChange(name,value) {
+    // console.log(name,value)
+    // const { tname, value } = event.target;
+    setInputValue({ ...inputValues, [name]: value });
+  }
+
+  const checkValidation = () => {
+    let errors = validation;
+    const regexpnum = new RegExp('^[0-9]*/d{10}$');
+    //first Name validation
+    // if (!inputValues.fname.trim()) {
+    //   errors.fname = "Name is required";
+    // } 
+    // else if(inputValues.fname.length<5){
+    //   errors.fname = "Enter full name"
+    // }
+    // else {
+    //   errors.fname = "";
+    // }
+    //Phone validation
+    // if (!inputValues.phone.trim()) {
+    //   errors.phone = "Phone Number is required";
+    // } 
+    // else if(!regexpnum.test(inputValues.phone)){
+    //   console.log()
+    //   errors.phone = "Enter Valid Phone Number!"
+    // }
+    // else if(inputValues.phone.length!=10){
+    //   console.log(inputValues.phone.length)
+    //   errors.phone = "Enter Valid Phone Number!"
+    // }
+    // else {
+    //   errors.phone = "";
+    // }
+    //last Name validation
+    // if (!inputValues.lName.trim()) {
+    //   errors.lName = "Last name is required";
+    // } else {
+    //   errors.lName = "";
+    // }
+
+    // email validation
+    // const emailCond =
+    //   "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/";
+    // if (!inputValues.email.trim()) {
+    //   errors.email = "Email is required";
+    // } else if (!inputValues.email.match(emailCond)) {
+    //   errors.email = "Please ingress a valid email address";
+    // } else {
+    //   errors.email = "";
+    // }
+
+    //password validation
+    // const cond1 = "/^(?=.*[a-z]).{6,20}$/";
+    // const cond2 = "/^(?=.*[A-Z]).{6,20}$/";
+    // const cond3 = "/^(?=.*[0-9]).{6,20}$/";
+    // const password = inputValues.password;
+    // if (!password) {
+    //   errors.password = "password is required";
+    // } else if (password.length < 6) {
+    //   errors.password = "Password must be longer than 6 characters";
+    // } else if (password.length >= 20) {
+    //   errors.password = "Password must shorter than 20 characters";
+    // } else if (!password.match(cond1)) {
+    //   errors.password = "Password must contain at least one lowercase";
+    // } else if (!password.match(cond2)) {
+    //   errors.password = "Password must contain at least one capital letter";
+    // } else if (!password.match(cond3)) {
+    //   errors.password = "Password must contain at least a number";
+    // } else {
+    //   errors.password = "";
+    // }
+
+    //matchPassword validation
+    // if (!inputValues.confirmPassword) {
+    //   errors.confirmPassword = "Password confirmation is required";
+    // } else if (inputValues.confirmPassword !== inputValues.Password) {
+    //   errors.confirmPassword = "Password does not match confirmation password";
+    // } else {
+    //   errors.password = "";
+    // }
+
+    // setValidation(errors);
+  };
+
+  useEffect(() => {
+    checkValidation();
+  }, [inputValues]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   const [pronoun, setPronoun] = useState('he/him')
   const [role, setRole] = useState('Architect')
   // const [experience, setExperience] = useState('false');
-  const [confirm, setConfirm] = useState('')
+  let [confirm, setConfirm] = useState('')
   // const [email, setEmail] = useState('');
-  const [contactNumber, setContactNumber] = useState('')
   const [enrolled, setEnrolled] = useState('')
-  const [organization, setOrganization] = useState('')
-  const [city, setCity] = useState('')
-  const [about, setAbout] = useState('')
-  const [linkedin, setLinkedin] = useState('')
-  const [github, setGithub] = useState('')
   const [blog, setBlog] = useState('')
-  const [workshop, setWorkshop] = useState('false')
-  const [conference, setConference] = useState('false')
   const [diet, setDiet] = useState('None')
   const [tsize, setTsize] = useState('S')
-  const [understand, setUnderstand] = useState('')
+  let [understand, setUnderstand] = useState('')
   const [user] = useAuthState(auth)
   let navigate = useNavigate()
   if (user) {
@@ -39,25 +146,27 @@ const Forms = () => {
   // Registration Event
   function RegistrationEvent(e, user) {
     e.preventDefault()
+    if(validation.fname == "" && validation.phone == "" && validation.organization == "" && validation.city =="" && validation.about =="" && validation.linkedin =="" && validation.github ==""){
+    if(confirm == "true" && understand == "true"){
+      confirm="yes"
+      understand="yes"
     const db = getFirestore(app)
     // const encodedEmail = base64_encode(email)
     setDoc(doc(db, 'register', user.uid), {
-      name: name,
+      name: inputValues.fname,
       pronoun: pronoun,
       role: role,
       // experience: experience,
       confirm: confirm,
       email: email,
-      contact: contactNumber,
+      contact: inputValues.phone,
       enrolled: enrolled,
-      organization: organization,
-      city: city,
-      about: about,
-      LinkedIn: linkedin,
-      GitHub: github,
+      organization: inputValues.organization,
+      city: inputValues.city,
+      about: inputValues.about,
+      LinkedIn: inputValues.linkedin,
+      GitHub: inputValues.github,
       Blog: blog,
-      workshop: workshop,
-      conference: conference,
       diet: diet,
       tsize: tsize,
       understand: understand
@@ -71,6 +180,13 @@ const Forms = () => {
         console.error('Error adding document: ', error)
       })
     console.log('hola')
+    }else{
+      console.log("not ticked")
+    }}
+    else{
+      console.log("errored")
+      // console.log(validation)
+    }
   }
 
   return (
@@ -83,25 +199,32 @@ const Forms = () => {
               Complete your participant application here and wait for us to get back
               to you on your application status!
             </p>
-            <form action="#" className="space-y-8">
+            <form className="space-y-8" id='registrationForm'
+              action='#'
+              onSubmit={handleSubmit}>
               <div>
                 <label
-                  htmlFor="full_name"
+                  htmlFor="fname"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Full name
                 </label>
                 <input
                   type="text"
-                  id="full_name"
+                  id="fname"
+                  name="fname"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="John Doe"
+                  placeholder="eg: John Doe"
                   required
-                  onChange={(e) => {
-                    console.log(e.target.value)
-                    setName(e.target.value)
-                  }}
+                  onChange={(e) => {handleChange(e.target.name,e.target.value);
+                    setValidation({...validation,fname:e.target.value ?(e.target.value.length>5 ? '' : 'Enter Full name'):"Name is Required"});
+                    // setName(e.target.value)
+                  }
+                  }
+                  // value={inputValues.fname}
                 />
+                {validation.fname && <p>{validation.fname}</p>}
+                {/* {validation.fname && console.log(validation)} */}
               </div>
               <div>
                 <label
@@ -113,14 +236,18 @@ const Forms = () => {
                 <input
                   type="tel"
                   id="phone"
+                  name ="phone"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="9000000000"
+                  placeholder="eg: 7412589631"
                   required
                   onChange={(e) => {
-                    console.log(e.target.value)
-                    setContactNumber(e.target.value)
-                  }}
+                    handleChange(e.target.name,e.target.value);
+                    setValidation({...validation,phone:e.target.value ?(regexpnum.test(e.target.value) ? '' : 'Enter Valid Phone Number!'):"Contact is Required"});
+                  }
+                  // setName(e.target.value)
+                  }
                 />
+                {validation.phone && <p>{validation.phone}</p>}
               </div>
               <div>
                 <label
@@ -131,11 +258,12 @@ const Forms = () => {
                 </label>
                 <select
                   id="pronoun"
+                  name="pronoun"
                   className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   onChange={(e) => {
-                    console.log(e.target.value)
                     setPronoun(e.target.value)
-                  }}
+                  }
+                }
                 >
                   <option value="he/him">he/him</option>
                   <option value="she/her">she/her</option>
@@ -150,8 +278,8 @@ const Forms = () => {
                   value="yes"
                   className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                   onChange={(e) => {
-                    console.log(e.target.value)
-                    setEnrolled(e.target.value)
+                    // console.log(e.target.value)
+                    setEnrolled(e.target.checked.toString())
                   }}
                 />
                 <label
@@ -172,14 +300,18 @@ const Forms = () => {
                 <input
                   type="text"
                   id="organization"
+                  name="organization"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="Dunder Mifflin Paper Company, Inc."
+                  placeholder="eg: Dunder Mifflin Paper Company, Inc."
                   required
                   onChange={(e) => {
-                    console.log(e.target.value)
-                    setOrganization(e.target.value)
-                  }}
+                    handleChange(e.target.name,e.target.value);
+                    setValidation({...validation,organization:(e.target.value.trim() == "")?"Organization is Required":""});
+                    // setName(e.target.value)
+                  }
+                  }
                 />
+                {validation.organization && <p>{validation.organization}</p>}
               </div>
               <div>
                 <label
@@ -191,14 +323,17 @@ const Forms = () => {
                 <input
                   type="text"
                   id="city"
+                  name="city"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="Kolkata"
+                  placeholder="eg: Pune"
                   required
                   onChange={(e) => {
-                    console.log(e.target.value)
-                    setCity(e.target.value)
-                  }}
+                    handleChange(e.target.name,e.target.value);
+                    setValidation({...validation,city:(e.target.value.trim() == "") ?"City is Required" : ""});
+                  }
+                }
                 />
+                {validation.city && <p>{validation.city}</p>}
               </div>
               <div>
                 <label
@@ -211,7 +346,7 @@ const Forms = () => {
                   id="role"
                   className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   onChange={(e) => {
-                    console.log(e.target.value)
+                    // console.log(e.target.value)
                     setRole(e.target.value)
                   }}
                 >
@@ -253,13 +388,15 @@ const Forms = () => {
                 <textarea
                   id="about"
                   rows={4}
+                  name="about"
                   className="mt-2 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="I own a light saber..."
-                  onChange={(e) => {
-                    console.log(e.target.value)
-                    setAbout(e.target.value)
+                  placeholder="Tell us about you in minimum 100 characters "
+                  onChange={(e) => {handleChange(e.target.name,e.target.value);
+                    setValidation({...validation,about:e.target.value ?(e.target.value.length> 100? '' : 'Please write about in minimum 100 characters'):"About is Required"});
+                    // setName(e.target.value)
                   }}
                 ></textarea>
+                {validation.about && <p>{validation.about}</p>}
               </div>
               <div>
                 <label
@@ -271,14 +408,16 @@ const Forms = () => {
                 <input
                   type="url"
                   id="linkedin"
+                  name="linkedin"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="https://www.linkedin.com/in/johndoe/"
+                  placeholder="eg:https://www.linkedin.com/in/johndoe/"
                   required
-                  onChange={(e) => {
-                    console.log(e.target.value)
-                    setLinkedin(e.target.value)
+                  onChange={(e) => {handleChange(e.target.name,e.target.value);
+                    setValidation({...validation,linkedin:e.target.value ?((e.target.value.substring(0,28) == "https://www.linkedin.com/in/") ? '' : 'Provide Valid Linkedin Profile'):"Linkedin Profile is Required"});
+                    // setName(e.target.value)
                   }}
                 />
+                {validation.linkedin && <p>{validation.linkedin}</p>}
               </div>
 
               <div>
@@ -291,14 +430,16 @@ const Forms = () => {
                 <input
                   type="url"
                   id="github"
+                  name="github"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="https://github.com/johndoe"
+                  placeholder="eg: https://github.com/johndoe"
                   required
-                  onChange={(e) => {
-                    console.log(e.target.value)
-                    setGithub(e.target.value)
+                  onChange={(e) => {handleChange(e.target.name,e.target.value);
+                    setValidation({...validation,github:e.target.value ?((e.target.value.substring(0,19) == "https://github.com/") ? '' : 'Provide a Valid Github Profile'):"Github Profile is Required"});
+                    // setName(e.target.value)
                   }}
                 />
+                {validation.github && <p>{validation.github}</p>}
               </div>
 
               <div>
@@ -312,64 +453,13 @@ const Forms = () => {
                   type="url"
                   id="website"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="https://johndoe.com"
+                  placeholder="eg:https://johndoe.com"
                   required
                   onChange={(e) => {
-                    console.log(e.target.value)
+                    // console.log(e.target.value)
                     setBlog(e.target.value)
                   }}
                 />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="event_parts"
-                  className="block mb-2 text-sm font-medium text-gray-900 "
-                >
-                  What parts of the event are you interested in?
-                </label>
-                <ul className="items-center w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-                  <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
-                    <div className="flex items-center">
-                      <input
-                        id="day1"
-                        type="checkbox"
-                        value="yes"
-                        className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                        onChange={(e) => {
-                          console.log(e.target.value)
-                          setWorkshop(e.target.value)
-                        }}
-                      />
-                      <label
-                        htmlFor="day1"
-                        className="py-3 ml-2 w-full text-sm font-medium text-gray-900 "
-                      >
-                        Workshop - Day 1
-                      </label>
-                    </div>
-                  </li>
-                  <li className="w-full dark:border-gray-600">
-                    <div className="flex items-center pl-8">
-                      <input
-                        id="day2"
-                        type="checkbox"
-                        value="yes"
-                        className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
-                        onChange={(e) => {
-                          console.log(e.target.value)
-                          setConference(e.target.value)
-                        }}
-                      />
-                      <label
-                        htmlFor="day2"
-                        className="py-3 ml-2 w-full text-sm font-medium text-gray-900 "
-                      >
-                        Conference - Day 2
-                      </label>
-                    </div>
-                  </li>
-                </ul>
               </div>
               <div>
                 <label
@@ -382,7 +472,7 @@ const Forms = () => {
                   id="diet"
                   className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   onChange={(e) => {
-                    console.log(e.target.value)
+                    // console.log(e.target.value)
                     setDiet(e.target.value)
                   }}
                 >
@@ -405,7 +495,7 @@ const Forms = () => {
                   id="tshirt"
                   className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   onChange={(e) => {
-                    console.log(e.target.value)
+                    // console.log(e.target.value)
                     setTsize(e.target.value)
                   }}
                 >
@@ -426,8 +516,9 @@ const Forms = () => {
                     value="yes"
                     className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                     onChange={(e) => {
-                      console.log(e.target.value)
-                      setConfirm(e.target.value)
+                      // console.log(e)
+                      setConfirm(e.target.checked.toString())
+                      setValidation({...validation,confirm:(e.target.checked) ?"" : "Kindly agree to the Terms and Conditions"})
                     }}
                   />
                 </div>
@@ -449,6 +540,7 @@ const Forms = () => {
                     to the GDG event code of conduct for my attendance at any GDG
                     event, both in-person and online.
                   </p>
+                  {validation.confirm && <p>{validation.confirm}</p>}
                 </div>
               </div>
               <div className="flex mt-2">
@@ -460,8 +552,9 @@ const Forms = () => {
                     value="yes"
                     className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                     onChange={(e) => {
-                      console.log(e.target.value)
-                      setUnderstand(e.target.value)
+                      // console.log(e.target.value)
+                      setUnderstand(e.target.checked.toString())
+                      setValidation({...validation,understand:(e.target.checked) ?"" : "Kindly agree to Ticketing terms"})
                     }}
                   />
                 </div>
@@ -485,6 +578,7 @@ const Forms = () => {
                     make any claim on it nor will show up to the event without a
                     confirmation ticket.
                   </p>
+                  {validation.understand && <p>{validation.understand}</p>}
                 </div>
               </div>
               <button
@@ -496,7 +590,7 @@ const Forms = () => {
               </button>
               <button
                 type="button"
-                onClick={() => navigate('/ccd2022')}
+                // onClick={() => navigate('/ccd2022')}
                 className="text-black bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
               >
                 Cancel
