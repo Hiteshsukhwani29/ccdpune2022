@@ -27,6 +27,7 @@
     "dev": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy":"react-scripts build && firebase deploy",
     "test": "CI=false && react-scripts test --env=jsdom --passWithNoTests",
     "eject": "react-scripts eject"
   },
