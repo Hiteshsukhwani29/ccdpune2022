@@ -159,7 +159,7 @@ const Forms = () => {
   // Registration Event
   function RegistrationEvent(e, user) {
     e.preventDefault()
-    if(validation.fname == "" && validation.phone == "" && validation.pccode == "" && validation.organization == "" && validation.city =="" && validation.about =="" && validation.linkedin =="" && validation.github =="" && validation.diet == "" && inputValues.fname != "" && diet != "None" && inputValues.phone != "" && inputValues.pccode != "" && inputValues.organization != "" && inputValues.city !="" && inputValues.about !="" && inputValues.linkedin !="" && inputValues.github !="" && (wpno == "true" || (validation.wpPhone == "" && inputValues.wpPhone != "" && validation.wccode == "" && inputValues.wccode != ""))){
+    if(validation.fname == "" && validation.phone == "" && validation.pccode == "" && validation.organization == "" && validation.city =="" && validation.about =="" && validation.linkedin =="" && validation.diet == "" && inputValues.fname != "" && diet != "None" && inputValues.phone != "" && inputValues.pccode != "" && inputValues.organization != "" && inputValues.city !="" && inputValues.about !="" && inputValues.linkedin !="" && (wpno == "true" || (validation.wpPhone == "" && inputValues.wpPhone != "" && validation.wccode == "" && inputValues.wccode != ""))){
     if(confirm == "true" && understand == "true"){
       if(wpno == "true"){
         inputValues.wpPhone = inputValues.phone;
