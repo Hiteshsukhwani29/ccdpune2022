@@ -44,7 +44,7 @@ const Sponsors = () => {
           <a href="https://sessionize.com" className="no-underline" target="_blank">
             <div className="p-6">
               <img className="object-cover object-center w-fit mb-8 rounded-xl" src={cfplogo} alt="blog" />
-              <h2 className="mb-8 text-xs font-semibold tracking-widest text-blue-600 uppercase">CFP Platform Sponsor</h2>
+              <h2 className="mb-8 text-xs font-semibold tracking-widest text-blue-600 uppercase">CFS Platform Sponsor</h2>
             </div>
           </a>
           </div>
