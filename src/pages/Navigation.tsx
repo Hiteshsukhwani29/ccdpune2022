@@ -17,6 +17,7 @@ import Sessions from './Schedule/Schedule'
 import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
 import { useEffect, useState } from 'react'
+import Approval from '../Components/approval/Approval'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const [user] = useAuthState(auth)
@@ -72,6 +73,7 @@ export default function Navigation() {
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Home />} />
         <Route path="/sessions" element={<Sessions />} />
+        <Route path="/approval" element={<Approval/>} />
         <Route
           path="/tickets"
           element={<PrivateRoute component={Tickets} />}

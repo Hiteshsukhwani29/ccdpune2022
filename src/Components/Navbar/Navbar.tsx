@@ -30,9 +30,9 @@ export default function Navbar({ active, handleClick }) {
   return (
     <>
       <nav
-        className={`${scrolled ? 'shadow-lg bg-white/90' : ''} z-[100] fixed w-full`}
+        className={`${scrolled ? 'shadow-lg bg-white/90' : ''} z-[100] fixed w-full fixed-top`}
       >
-        <div className="max-w-6xl mx-auto  px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between">
             <div className="flex space-x-7">
               <div>
