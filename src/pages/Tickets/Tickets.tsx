@@ -4,7 +4,12 @@ import { db, auth } from '../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { getDoc, doc } from 'firebase/firestore'
 import { getStorage, ref, listAll, getDownloadURL } from 'firebase/storage'
+import {QRCodeSVG} from 'qrcode.react';
+import { QRCode } from 'react-qrcode-logo';
 import Title from '../../Components/Title/Title'
+import ReactDOM from 'react-dom';
+import gdg from '../../Images/qr.png'
+import logo from '../../Images/logo.png'
 
 const Tickets = () => {
   const [user, loading]: any = useAuthState(auth)
@@ -17,12 +22,14 @@ const Tickets = () => {
   const storage = getStorage()
 
   useEffect(() => {
-    if (loading) {
-      // maybe trigger a loading screen
-      return
-    }
+    // if (loading) {
+    //   // maybe trigger a loading screen
+    //   return
+    // }
 
     async function DocumentID() {
+      console.log(user);
+      
       if (user) {
         const docRef = doc(db, 'register', user.uid)
         const docSnap = await getDoc(docRef)
@@ -40,8 +47,8 @@ const Tickets = () => {
       if (applied) {
         const docRef = doc(db, 'tickets', user.uid)
         const docSnap = await getDoc(docRef)
-        if (docSnap.exists()) {
-          console.log(docSnap.data().conference)
+        if (true) {
+          // console.log(docSnap.data().conference)
           const listRef = ref(storage, user.uid + '/')
           listAll(listRef)
             .then((res) => {
@@ -84,98 +91,79 @@ const Tickets = () => {
 
       <div className="w-full max-w-7xl items-center justify-center flex flex-col lg:flex-row my-0 mx-auto gap-12 pt-20 lg:pt-28 lg:pb-[62px] px-4">
         <div className="w-full">
-          <div className="text-6xl text-g-gray-8 mb-8 font-light">Tickets</div>
+          <div className="text-5xl text-g-gray-8 mb-8 font-light">Tickets</div>
       <p className="mb-4 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
         Congratulations on making it through hundreds of applications! <br />
         We look forward to see you at the Cloud Community Days.
       </p>
-      <p className="mb-8 lg:mb-16 font-light text-center text-red-600 sm:text-xl">
+      {/* <p className="mb-8 lg:mb-16 font-light text-center text-red-600 sm:text-xl">
         Workshop passes will start rolling out from 5 August. <br />
         Check here after 5 August for your Workshop pass.
-      </p>
-      <div className="flex flex-col lg:flex-row my-0 lg:justify-center items-center ">
-        {conferencePassTicket || workshopPassTicket ? (
-          <>
-            {workshopPassTicket ? (
-              <div className="m-4 flex flex-col items-center bg-gray-100 rounded-lg border shadow-md md:flex-row max-w-sm md:max-w-xl hover:bg-gray-200">
-                <img
-                  className="object-cover w-full max-h-screen border rounded-l-lg md:h-auto md:w-72 md:rounded-none md:rounded-l-lg"
-                  src={workshopPassTicket}
-                  alt="Workshop Pass"
-                />
-                <div className="flex flex-col justify-between p-4 leading-normal">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-                    Workshop Pass
-                  </h5>
-                  <p className="mb-3 font-normal text-gray-700">
-                    &#128197; 27 August, 2022 <br />
-                    &#128205; Kolkata
-                  </p>
-                  <a
-                    href={workshopPassTicket}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-2 text-center text-white no-underline bg-blue-500 rounded hover:bg-blue-600"
-                  >
-                    Download
-                  </a>
-                  <br />
-                  <span>
-                    Share the news with your friends, use hashtags #CCDKol and
-                    #CloudCommunityDays, tag us with @GDGCloudKol (
-                    <a href="https://twitter.com/gdgcloudkol">Twitter</a>,{' '}
-                    <a href="https://facebook.com/gdgcloudkol">Facebook</a>,{' '}
-                    <a href="https://instagram.com/gdgcloudkol">Instagram</a> or{' '}
-                    <a href="https://www.linkedin.com/company/gdgcloudkol/">
-                      LinkedIn
-                    </a>
+      </p> */}
+
+      <p className="text-center">
+                    Share the news with your friends, use hashtags #CCDPune and
+                    #CloudCommunityDays, tag us with @gdgcloudpune (
+                    <a 
+                      target={'_blank'}
+                      rel={'noreferrer'}
+                      href="https://twitter.com/gdgcloudpune">Twitter</a>
                     ) and stand a chance to win exclusive goodies! 🎉
-                  </span>
-                </div>
-              </div>
-            ) : (
-              <></>
-            )}
-            {conferencePassTicket ? (
-              <div className="flex flex-col items-center bg-gray-100 rounded-lg border shadow-md md:flex-row max-w-sm md:max-w-xl hover:bg-gray-200">
-                <img
-                  className="object-cover w-full max-h-screen border rounded-l-lg md:h-auto md:w-72 md:rounded-none md:rounded-l-lg"
-                  src={conferencePassTicket}
-                  alt="Conference Pass"
-                />
-                <div className="flex flex-col justify-between p-4 leading-normal">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-                    Conference Pass
-                  </h5>
-                  <p className="mb-3 font-normal text-gray-700">
-                    &#128197; 28 August, 2022 <br />
-                    &#128205; Taal Kutir Convention Center by Taj, Kolkata
                   </p>
-                  <a
+
+                  <div className="text-center">
+      <a
                     href={conferencePassTicket}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-6 py-2 text-center text-white no-underline bg-blue-500 rounded hover:bg-blue-600"
+                    className="btn btn-primary me-2 text-center text-white no-underline bg-blue-500 rounded hover:bg-blue-600"
                   >
                     Download
                   </a>
+        <a className="btn btn-primary my-4" href="/ccd2022">
+          Go Home
+        </a>
+      </div>
+
+      <div className="flex flex-col lg:flex-row my-0 lg:justify-center items-center ">
+        { false ? (
+          <>
+            
+            {false ? (
+              <div className=" bg-gray-100 rounded-lg border shadow-md md:flex-row max-w-sm md:max-w-xl hover:bg-gray-200">
+                <div className='d-flex justify-center mt-4'>
+                  {/* <QRCodeSVG
+                  height={200}
+                  width={200}
+                  className="mx-2"
+                  value={user.uid} /> */}
+                  <QRCode 
+                  logoWidth={70}
+                  value={user.uid}
+                  size={200}
+                  logoImage={gdg} />,
+                </div>
+
+                <div className="justify-between p-4 leading-normal">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                    Cloud Community Day <br /> Pune - 2022 
+                  </h5>
+                  <p className="mb-0 text-xl font-normal text-gray-700 fw-bold">
+                    &#9654;   {user.displayName} <br />
+                    &#128197; 24 September, 2022 <br />
+                    &#128205; Conrad Pune
+                  </p>
                   <br />
-                  <span>
-                    Share the news with your friends, use hashtags #CCDKol and
-                    #CloudCommunityDays, tag us with @GDGCloudKol (
-                    <a href="https://twitter.com/gdgcloudkol">Twitter</a>,{' '}
-                    <a href="https://facebook.com/gdgcloudkol">Facebook</a>,{' '}
-                    <a href="https://instagram.com/gdgcloudkol">Instagram</a> or{' '}
-                    <a href="https://www.linkedin.com/company/gdgcloudkol/">
-                      LinkedIn
-                    </a>
-                    ) and stand a chance to win exclusive goodies! 🎉
-                  </span>
+                  <div className="flex flex-col align-items-center" >
+                    <p className="mb-1" >Organized by</p>
+                    <img width={200} src={logo} alt="GDG Cloud Pune" />
+                  </div>
                 </div>
               </div>
             ) : (
               <></>
             )}
+            
           </>
         ) : (
           <div className="w-full my-0 mx-auto py-48">
@@ -189,13 +177,6 @@ const Tickets = () => {
             </div>
           </div>
         )}
-      </div>
-      <br />
-      <br />
-      <div className="text-center">
-        <a className="btn btn-primary my-4" href="/ccd2022">
-          Go Home
-        </a>
       </div>
       <br />
       <br />

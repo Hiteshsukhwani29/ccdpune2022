@@ -40,6 +40,7 @@ const Forms = () => {
     wpPhone:"",
     pccode:"",
     wccode:"",
+    diet:"",
   });
   function handleChange(name,value) {
     // console.log(name,value)
@@ -158,7 +159,7 @@ const Forms = () => {
   // Registration Event
   function RegistrationEvent(e, user) {
     e.preventDefault()
-    if(validation.fname == "" && validation.phone == "" && validation.pccode == "" && validation.organization == "" && validation.city =="" && validation.about =="" && validation.linkedin =="" && validation.github =="" && inputValues.fname != "" && inputValues.phone != "" && inputValues.pccode != "" && inputValues.organization != "" && inputValues.city !="" && inputValues.about !="" && inputValues.linkedin !="" && inputValues.github !="" && (wpno == "true" || (validation.wpPhone == "" && inputValues.wpPhone != "" && validation.wccode == "" && inputValues.wccode != ""))){
+    if(validation.fname == "" && validation.phone == "" && validation.pccode == "" && validation.organization == "" && validation.city =="" && validation.about =="" && validation.linkedin =="" && validation.github =="" && validation.diet == "" && inputValues.fname != "" && diet != "None" && inputValues.phone != "" && inputValues.pccode != "" && inputValues.organization != "" && inputValues.city !="" && inputValues.about !="" && inputValues.linkedin !="" && inputValues.github !="" && (wpno == "true" || (validation.wpPhone == "" && inputValues.wpPhone != "" && validation.wccode == "" && inputValues.wccode != ""))){
     if(confirm == "true" && understand == "true"){
       if(wpno == "true"){
         inputValues.wpPhone = inputValues.phone;
@@ -206,6 +207,7 @@ const Forms = () => {
     }}
     else{
       console.log("errored")
+      alert("Please check all the fields")
       // console.log(validation)
     }
   }
@@ -575,6 +577,7 @@ const Forms = () => {
                   className="mt-2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   onChange={(e) => {
                     // console.log(e.target.value)
+                    setValidation({...validation,diet:(e.target.value == "None")?"Diet is Required":""});
                     setDiet(e.target.value)
                   }}
                 >
@@ -585,7 +588,9 @@ const Forms = () => {
                   <option value="Vegan">Vegan</option>
                   <option value="Other">Other</option>
                 </select>
+                {(diet=="None") && <p style={{ color: 'red' }}>Diet is required</p>}
               </div>
+
               <div>
                 <label
                   htmlFor="tshirt"
