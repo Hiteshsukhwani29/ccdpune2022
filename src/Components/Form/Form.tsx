@@ -248,10 +248,10 @@ const Forms = () => {
               </div>
               <div>
                 <label
-                  htmlFor="phone"
+                  htmlFor="pccode"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Phone number
+                  Country Code
                 </label>
                 <input
                   type="tel"
@@ -268,6 +268,12 @@ const Forms = () => {
                   }
                 />
                 {(validation.pccode) && <p style={{ color: 'red' }}>{validation.pccode}</p>}
+                <label
+                  htmlFor="phone"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  Phone number
+                </label>
                 <input
                   type="tel"
                   id="phone"
@@ -303,10 +309,10 @@ const Forms = () => {
               </div>
               <div >
                 {wpno === "false" && <label
-                  htmlFor="wpPhone"
+                  htmlFor="wccode"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Whatsapp number
+                  Country Code
                 </label>}
                 {wpno === "false" && <input
                   type="tel"
@@ -323,6 +329,12 @@ const Forms = () => {
                   }
                 />}
                 {(wpno === "false" && validation.wccode) && <p style={{ color: 'red' }}>{validation.wccode}</p>}
+                {wpno === "false" && <label
+                  htmlFor="wpPhone"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  Whatsapp number
+                </label>}
                 {wpno === "false" && <input
                   type="tel"
                   id="wpPhone"
