@@ -3,9 +3,9 @@ import 'firebase/firestore'
 import { useState,useEffect } from 'react'
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom'
-import { getFirestore, setDoc, doc } from 'firebase/firestore'
+import { getFirestore, setDoc, getDoc, doc } from 'firebase/firestore'
 import app from '../../services/firebase'
-import { auth } from '../../services/UserAuth'
+import { db, auth } from '../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 // import { encode as base64_encode } from 'base-64'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -144,8 +144,13 @@ const Forms = () => {
   const [tsize, setTsize] = useState('S')
   let [understand, setUnderstand] = useState('')
   const [wpno, setwpNo] = useState('false')
-  const [user] = useAuthState(auth)
+  let [user]:any = useAuthState(auth)
   let navigate = useNavigate()
+  // const docRef = doc(db, 'register', user.uid)
+  // const docSnap = await getDoc(docRef)
+  // if(docSnap.exists()){
+  //   navigate('/ccd2022/dashboard')
+  // }
   if (user) {
     var email = user.email
   }
@@ -161,6 +166,7 @@ const Forms = () => {
       }
       confirm="yes"
       understand="yes"
+      const gdgName = inputValues.fname.replace(" ","%20")
     const db = getFirestore(app)
     // const encodedEmail = base64_encode(email)
     setDoc(doc(db, 'register', user.uid), {
@@ -186,6 +192,7 @@ const Forms = () => {
       wccode: inputValues.wccode,
     })
       .then((docRef) => {
+        fetch("https://api.u-smart.in/prod/gdgcc?name="+gdgName+"&mobile="+inputValues.wpPhone+"&ccode="+inputValues.wccode).then((res) => console.log(res.json));
         console.log('Document written with ID: ', docRef)
         console.log('done')
         navigate('/ccd2022/dashboard')
@@ -206,7 +213,6 @@ const Forms = () => {
   return (
     <>
       <Title heading="Application Form" />
-      <form>
         <section className="bg-white">
           <div className="pb-8 lg:pb-16 px-4 mx-auto max-w-screen-md">
             <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
@@ -266,7 +272,7 @@ const Forms = () => {
                   type="tel"
                   id="phone"
                   name ="phone"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-4"
                   placeholder="eg: 7412589631"
                   required
                   onChange={(e) => {
@@ -321,7 +327,7 @@ const Forms = () => {
                   type="tel"
                   id="wpPhone"
                   name ="wpPhone"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-4"
                   placeholder="eg: 7412589631"
                   required
                   onChange={(e) => {
@@ -682,7 +688,6 @@ const Forms = () => {
             </form>
           </div>
         </section>
-      </form>
     </>
   )
 }

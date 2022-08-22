@@ -29,7 +29,7 @@ const Hero = () => {
             setRejected(true)
           }
           setApplied(true)
-          // navigate('/ccd2022/dashboard')
+          navigate('/ccd2022/dashboard')
         } else {
           // console.log('No such document!')
           // navigate('/ccd2022/rsvp')
@@ -106,17 +106,17 @@ const Hero = () => {
                 ) : (
                   <button
                     className="transition ease-in-out bg-yellow-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
-                    // onClick={() => navigate('/ccd2022/rsvp')}
+                    onClick={() => navigate('/ccd2022/rsvp')}
                   >
-                    Registrations Will Be Live Soon.!
+                    Apply for Ticket
                   </button>
                 )
               ) : (
                 <button
                   className="transition ease-in-out bg-blue-500 hover:bg-blue-600 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
-                  // onClick={signInWithGoogle}
+                  onClick={signInWithGoogle}
                 >
-                  Registrations Will Be Live Soon.!
+                  Reserve your seat
                 </button>
               )}
 
