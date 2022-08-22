@@ -22,6 +22,9 @@ const Forms = () => {
     about:"",
     linkedin:"",
     github:"",
+    wpPhone:"",
+    pccode:"",
+    wccode:"",
   });
   const [validation, setValidation] = useState({
     fname: "",
@@ -34,6 +37,9 @@ const Forms = () => {
     github:"",
     confirm:"",
     understand:"",
+    wpPhone:"",
+    pccode:"",
+    wccode:"",
   });
   function handleChange(name,value) {
     // console.log(name,value)
@@ -137,6 +143,7 @@ const Forms = () => {
   const [diet, setDiet] = useState('None')
   const [tsize, setTsize] = useState('S')
   let [understand, setUnderstand] = useState('')
+  const [wpno, setwpNo] = useState('false')
   const [user] = useAuthState(auth)
   let navigate = useNavigate()
   if (user) {
@@ -146,8 +153,12 @@ const Forms = () => {
   // Registration Event
   function RegistrationEvent(e, user) {
     e.preventDefault()
-    if(validation.fname == "" && validation.phone == "" && validation.organization == "" && validation.city =="" && validation.about =="" && validation.linkedin =="" && validation.github ==""){
+    if(validation.fname == "" && validation.phone == "" && validation.pccode == "" && validation.organization == "" && validation.city =="" && validation.about =="" && validation.linkedin =="" && validation.github =="" && inputValues.fname != "" && inputValues.phone != "" && inputValues.pccode != "" && inputValues.organization != "" && inputValues.city !="" && inputValues.about !="" && inputValues.linkedin !="" && inputValues.github !="" && (wpno == "true" || (validation.wpPhone == "" && inputValues.wpPhone != "" && validation.wccode == "" && inputValues.wccode != ""))){
     if(confirm == "true" && understand == "true"){
+      if(wpno == "true"){
+        inputValues.wpPhone = inputValues.phone;
+        inputValues.wccode = inputValues.pccode;
+      }
       confirm="yes"
       understand="yes"
     const db = getFirestore(app)
@@ -160,6 +171,7 @@ const Forms = () => {
       confirm: confirm,
       email: email,
       contact: inputValues.phone,
+      pccode:inputValues.pccode,
       enrolled: enrolled,
       organization: inputValues.organization,
       city: inputValues.city,
@@ -169,7 +181,9 @@ const Forms = () => {
       Blog: blog,
       diet: diet,
       tsize: tsize,
-      understand: understand
+      understand: understand,
+      wpPhone: inputValues.wpPhone,
+      wccode: inputValues.wccode,
     })
       .then((docRef) => {
         console.log('Document written with ID: ', docRef)
@@ -223,7 +237,7 @@ const Forms = () => {
                   }
                   // value={inputValues.fname}
                 />
-                {validation.fname && <p>{validation.fname}</p>}
+                {validation.fname && <p style={{ color: 'red' }}>{validation.fname}</p>}
                 {/* {validation.fname && console.log(validation)} */}
               </div>
               <div>
@@ -233,6 +247,21 @@ const Forms = () => {
                 >
                   Phone number
                 </label>
+                <input
+                  type="tel"
+                  id="pccode"
+                  name ="pccode"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                  placeholder="eg: +91"
+                  required
+                  onChange={(e) => {
+                    handleChange(e.target.name,e.target.value);
+                    setValidation({...validation,pccode:(e.target.value.trim() == "")?"Country code is Required":""});
+                  }
+                  // setName(e.target.value)
+                  }
+                />
+                {(validation.pccode) && <p style={{ color: 'red' }}>{validation.pccode}</p>}
                 <input
                   type="tel"
                   id="phone"
@@ -247,7 +276,62 @@ const Forms = () => {
                   // setName(e.target.value)
                   }
                 />
-                {validation.phone && <p>{validation.phone}</p>}
+                {validation.phone && <p style={{ color: 'red' }}>{validation.phone}</p>}
+              </div>
+              <div className="flex items-center mb-4">
+                <input
+                  id="is_wpNo"
+                  type="checkbox"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  onChange={(e) => {
+                    // console.log(e.target.value)
+                    setwpNo(e.target.checked.toString())
+                  }}
+                />
+                <label
+                  htmlFor="is_wpNo"
+                  className="ml-2 text-sm font-medium text-gray-900 "
+                >
+                  Is this your whatsapp Number?
+                </label>
+              </div>
+              <div >
+                {wpno === "false" && <label
+                  htmlFor="wpPhone"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  Whatsapp number
+                </label>}
+                {wpno === "false" && <input
+                  type="tel"
+                  id="wccode"
+                  name ="wccode"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                  placeholder="eg: +91"
+                  required
+                  onChange={(e) => {
+                    handleChange(e.target.name,e.target.value);
+                    setValidation({...validation,wccode:(e.target.value.trim() == "")?"Country code is Required":""});
+                  }
+                  // setName(e.target.value)
+                  }
+                />}
+                {(wpno === "false" && validation.wccode) && <p style={{ color: 'red' }}>{validation.wccode}</p>}
+                {wpno === "false" && <input
+                  type="tel"
+                  id="wpPhone"
+                  name ="wpPhone"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                  placeholder="eg: 7412589631"
+                  required
+                  onChange={(e) => {
+                    handleChange(e.target.name,e.target.value);
+                    setValidation({...validation,wpPhone:e.target.value ?(regexpnum.test(e.target.value) ? '' : 'Enter Valid Phone Number!'):"Contact is Required"});
+                  }
+                  // setName(e.target.value)
+                  }
+                />}
+                {(wpno === "false" && validation.wpPhone) && <p style={{ color: 'red' }}>{validation.wpPhone}</p>}
               </div>
               <div>
                 <label
@@ -311,7 +395,7 @@ const Forms = () => {
                   }
                   }
                 />
-                {validation.organization && <p>{validation.organization}</p>}
+                {validation.organization && <p style={{ color: 'red' }}>{validation.organization}</p>}
               </div>
               <div>
                 <label
@@ -333,7 +417,7 @@ const Forms = () => {
                   }
                 }
                 />
-                {validation.city && <p>{validation.city}</p>}
+                {validation.city && <p style={{ color: 'red' }}>{validation.city}</p>}
               </div>
               <div>
                 <label
@@ -396,7 +480,7 @@ const Forms = () => {
                     // setName(e.target.value)
                   }}
                 ></textarea>
-                {validation.about && <p>{validation.about}</p>}
+                {validation.about && <p style={{ color: 'red' }}>{validation.about}</p>}
               </div>
               <div>
                 <label
@@ -417,7 +501,7 @@ const Forms = () => {
                     // setName(e.target.value)
                   }}
                 />
-                {validation.linkedin && <p>{validation.linkedin}</p>}
+                {validation.linkedin && <p style={{ color: 'red' }}>{validation.linkedin}</p>}
               </div>
 
               <div>
@@ -439,7 +523,7 @@ const Forms = () => {
                     // setName(e.target.value)
                   }}
                 />
-                {validation.github && <p>{validation.github}</p>}
+                {validation.github && <p style={{ color: 'red' }}>{validation.github}</p>}
               </div>
 
               <div>
@@ -540,7 +624,7 @@ const Forms = () => {
                     to the GDG event code of conduct for my attendance at any GDG
                     event, both in-person and online.
                   </p>
-                  {validation.confirm && <p>{validation.confirm}</p>}
+                  {validation.confirm && <p style={{ color: 'red' }}>{validation.confirm}</p>}
                 </div>
               </div>
               <div className="flex mt-2">
@@ -578,7 +662,7 @@ const Forms = () => {
                     make any claim on it nor will show up to the event without a
                     confirmation ticket.
                   </p>
-                  {validation.understand && <p>{validation.understand}</p>}
+                  {validation.understand && <p style={{ color: 'red' }}>{validation.understand}</p>}
                 </div>
               </div>
               <button
