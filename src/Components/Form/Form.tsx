@@ -243,10 +243,11 @@ const Forms = () => {
                     // setName(e.target.value)
                   }
                   }
+                  onFocus={(e) => {setValidation({...validation,fname:e.target.value ?(e.target.value.length>5 ? '' : 'Enter Full name'):"Name is Required"});}}
                   // value={inputValues.fname}
                 />
                 {validation.fname && <p style={{ color: 'red' }}>{validation.fname}</p>}
-                {/* {validation.fname && console.log(validation)} */}
+                
               </div>
               <div>
                 <label
@@ -268,6 +269,7 @@ const Forms = () => {
                   }
                   // setName(e.target.value)
                   }
+                  onFocus={(e) => {setValidation({...validation,pccode:(e.target.value.trim() == "")?"Country code is Required":""});}}
                 />
                 {(validation.pccode) && <p style={{ color: 'red' }}>{validation.pccode}</p>}
                 <label
@@ -289,6 +291,7 @@ const Forms = () => {
                   }
                   // setName(e.target.value)
                   }
+                  onFocus={(e) => {setValidation({...validation,phone:e.target.value ?(regexpnum.test(e.target.value) ? '' : 'Enter Valid Phone Number!'):"Contact is Required"});}}
                 />
                 {validation.phone && <p style={{ color: 'red' }}>{validation.phone}</p>}
               </div>
@@ -329,6 +332,7 @@ const Forms = () => {
                   }
                   // setName(e.target.value)
                   }
+                  onFocus={(e) => {setValidation({...validation,wccode:(e.target.value.trim() == "")?"Country code is Required":""});}}
                 />}
                 {(wpno === "false" && validation.wccode) && <p style={{ color: 'red' }}>{validation.wccode}</p>}
                 {wpno === "false" && <label
@@ -350,6 +354,7 @@ const Forms = () => {
                   }
                   // setName(e.target.value)
                   }
+                  onFocus={(e) => {setValidation({...validation,wpPhone:e.target.value ?(regexpnum.test(e.target.value) ? '' : 'Enter Valid Phone Number!'):"Contact is Required"});}}
                 />}
                 {(wpno === "false" && validation.wpPhone) && <p style={{ color: 'red' }}>{validation.wpPhone}</p>}
               </div>
@@ -414,6 +419,7 @@ const Forms = () => {
                     // setName(e.target.value)
                   }
                   }
+                  onFocus={(e) => {setValidation({...validation,organization:(e.target.value.trim() == "")?"Organization is Required":""});}}
                 />
                 {validation.organization && <p style={{ color: 'red' }}>{validation.organization}</p>}
               </div>
@@ -436,6 +442,7 @@ const Forms = () => {
                     setValidation({...validation,city:(e.target.value.trim() == "") ?"City is Required" : ""});
                   }
                 }
+                onFocus={(e) => {setValidation({...validation,city:(e.target.value.trim() == "") ?"City is Required" : ""});}}
                 />
                 {validation.city && <p style={{ color: 'red' }}>{validation.city}</p>}
               </div>
@@ -499,6 +506,7 @@ const Forms = () => {
                     setValidation({...validation,about:e.target.value ?(e.target.value.length> 100? '' : 'Please write about in minimum 100 characters'):"About is Required"});
                     // setName(e.target.value)
                   }}
+                  onFocus={(e) => {setValidation({...validation,about:e.target.value ?(e.target.value.length> 100? '' : 'Please write about in minimum 100 characters'):"About is Required"});}}
                 ></textarea>
                 {validation.about && <p style={{ color: 'red' }}>{validation.about}</p>}
               </div>
@@ -520,6 +528,7 @@ const Forms = () => {
                     setValidation({...validation,linkedin:e.target.value ?((e.target.value.substring(0,28) == "https://www.linkedin.com/in/") ? '' : 'Provide Valid Linkedin Profile'):"Linkedin Profile is Required"});
                     // setName(e.target.value)
                   }}
+                  onFocus={(e) => {setValidation({...validation,linkedin:e.target.value ?((e.target.value.substring(0,28) == "https://www.linkedin.com/in/") ? '' : 'Provide Valid Linkedin Profile'):"Linkedin Profile is Required"});}}
                 />
                 {validation.linkedin && <p style={{ color: 'red' }}>{validation.linkedin}</p>}
               </div>
