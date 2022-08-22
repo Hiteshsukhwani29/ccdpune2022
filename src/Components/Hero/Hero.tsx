@@ -128,7 +128,7 @@ const Hero = () => {
                 aria-disabled={true}
               >
                 <button className="text-white bg-green-600 h-fit w-fit text-base py-2 px-4 rounded">
-                  CFS Open
+                  Call For Speakers Open
                 </button>
                 
               </a>
