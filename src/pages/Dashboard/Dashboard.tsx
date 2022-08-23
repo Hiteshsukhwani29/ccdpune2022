@@ -91,9 +91,11 @@ const Dashboard = () => {
                     </button>
                   </>
                   ) : (<>
-                    Thank you for applying to be a part of Cloud Community Days Pune 2022. <br/><br/>
-                    We will review your application and update its status on the website soon.<br /><br />
-                    We shall also send you an email when we close the review of all applications with your application's status.
+                    <p className="text-2xl fw-bold">Thank you for applying to be a part of<p className="text-g-blue-3 d-inline"> Cloud Community Days </p>Pune 2022.</p>
+                    <p className="text-lg">
+                      We will review your application and update its status on the website soon.<br/>
+                      We shall also send you an email when we close the review of all applications with your application's status.
+                    </p>
                   </>
                   )
                 ) : (
