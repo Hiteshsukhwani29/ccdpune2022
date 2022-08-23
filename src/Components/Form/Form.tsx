@@ -159,7 +159,7 @@ const Forms = () => {
   // Registration Event
   function RegistrationEvent(e, user) {
     e.preventDefault()
-    if(validation.fname == "" && validation.phone == "" && validation.pccode == "" && validation.organization == "" && validation.city =="" && validation.about =="" && validation.linkedin =="" && validation.github =="" && validation.diet == "" && inputValues.fname != "" && diet != "None" && inputValues.phone != "" && inputValues.pccode != "" && inputValues.organization != "" && inputValues.city !="" && inputValues.about !="" && inputValues.linkedin !="" && inputValues.github !="" && (wpno == "true" || (validation.wpPhone == "" && inputValues.wpPhone != "" && validation.wccode == "" && inputValues.wccode != ""))){
+    if(validation.fname == "" && validation.phone == "" && validation.pccode == "" && validation.organization == "" && validation.city =="" && validation.about =="" && validation.linkedin =="" && validation.diet == "" && inputValues.fname != "" && diet != "None" && inputValues.phone != "" && inputValues.pccode != "" && inputValues.organization != "" && inputValues.city !="" && inputValues.about !="" && inputValues.linkedin !="" && (wpno == "true" || (validation.wpPhone == "" && inputValues.wpPhone != "" && validation.wccode == "" && inputValues.wccode != ""))){
     if(confirm == "true" && understand == "true"){
       if(wpno == "true"){
         inputValues.wpPhone = inputValues.phone;
@@ -243,17 +243,18 @@ const Forms = () => {
                     // setName(e.target.value)
                   }
                   }
+                  onFocus={(e) => {setValidation({...validation,fname:e.target.value ?(e.target.value.length>5 ? '' : 'Enter Full name'):"Name is Required"});}}
                   // value={inputValues.fname}
                 />
                 {validation.fname && <p style={{ color: 'red' }}>{validation.fname}</p>}
-                {/* {validation.fname && console.log(validation)} */}
+                
               </div>
               <div>
                 <label
-                  htmlFor="phone"
+                  htmlFor="pccode"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Phone number
+                  Country Code
                 </label>
                 <input
                   type="tel"
@@ -268,8 +269,15 @@ const Forms = () => {
                   }
                   // setName(e.target.value)
                   }
+                  onFocus={(e) => {setValidation({...validation,pccode:(e.target.value.trim() == "")?"Country code is Required":""});}}
                 />
                 {(validation.pccode) && <p style={{ color: 'red' }}>{validation.pccode}</p>}
+                <label
+                  htmlFor="phone"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  Phone number
+                </label>
                 <input
                   type="tel"
                   id="phone"
@@ -283,6 +291,7 @@ const Forms = () => {
                   }
                   // setName(e.target.value)
                   }
+                  onFocus={(e) => {setValidation({...validation,phone:e.target.value ?(regexpnum.test(e.target.value) ? '' : 'Enter Valid Phone Number!'):"Contact is Required"});}}
                 />
                 {validation.phone && <p style={{ color: 'red' }}>{validation.phone}</p>}
               </div>
@@ -305,10 +314,10 @@ const Forms = () => {
               </div>
               <div >
                 {wpno === "false" && <label
-                  htmlFor="wpPhone"
+                  htmlFor="wccode"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Whatsapp number
+                  Country Code
                 </label>}
                 {wpno === "false" && <input
                   type="tel"
@@ -323,8 +332,15 @@ const Forms = () => {
                   }
                   // setName(e.target.value)
                   }
+                  onFocus={(e) => {setValidation({...validation,wccode:(e.target.value.trim() == "")?"Country code is Required":""});}}
                 />}
                 {(wpno === "false" && validation.wccode) && <p style={{ color: 'red' }}>{validation.wccode}</p>}
+                {wpno === "false" && <label
+                  htmlFor="wpPhone"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  Whatsapp number
+                </label>}
                 {wpno === "false" && <input
                   type="tel"
                   id="wpPhone"
@@ -338,6 +354,7 @@ const Forms = () => {
                   }
                   // setName(e.target.value)
                   }
+                  onFocus={(e) => {setValidation({...validation,wpPhone:e.target.value ?(regexpnum.test(e.target.value) ? '' : 'Enter Valid Phone Number!'):"Contact is Required"});}}
                 />}
                 {(wpno === "false" && validation.wpPhone) && <p style={{ color: 'red' }}>{validation.wpPhone}</p>}
               </div>
@@ -402,6 +419,7 @@ const Forms = () => {
                     // setName(e.target.value)
                   }
                   }
+                  onFocus={(e) => {setValidation({...validation,organization:(e.target.value.trim() == "")?"Organization is Required":""});}}
                 />
                 {validation.organization && <p style={{ color: 'red' }}>{validation.organization}</p>}
               </div>
@@ -424,6 +442,7 @@ const Forms = () => {
                     setValidation({...validation,city:(e.target.value.trim() == "") ?"City is Required" : ""});
                   }
                 }
+                onFocus={(e) => {setValidation({...validation,city:(e.target.value.trim() == "") ?"City is Required" : ""});}}
                 />
                 {validation.city && <p style={{ color: 'red' }}>{validation.city}</p>}
               </div>
@@ -487,6 +506,7 @@ const Forms = () => {
                     setValidation({...validation,about:e.target.value ?(e.target.value.length> 100? '' : 'Please write about in minimum 100 characters'):"About is Required"});
                     // setName(e.target.value)
                   }}
+                  onFocus={(e) => {setValidation({...validation,about:e.target.value ?(e.target.value.length> 100? '' : 'Please write about in minimum 100 characters'):"About is Required"});}}
                 ></textarea>
                 {validation.about && <p style={{ color: 'red' }}>{validation.about}</p>}
               </div>
@@ -508,6 +528,7 @@ const Forms = () => {
                     setValidation({...validation,linkedin:e.target.value ?((e.target.value.substring(0,28) == "https://www.linkedin.com/in/") ? '' : 'Provide Valid Linkedin Profile'):"Linkedin Profile is Required"});
                     // setName(e.target.value)
                   }}
+                  onFocus={(e) => {setValidation({...validation,linkedin:e.target.value ?((e.target.value.substring(0,28) == "https://www.linkedin.com/in/") ? '' : 'Provide Valid Linkedin Profile'):"Linkedin Profile is Required"});}}
                 />
                 {validation.linkedin && <p style={{ color: 'red' }}>{validation.linkedin}</p>}
               </div>
