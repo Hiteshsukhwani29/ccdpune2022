@@ -395,8 +395,8 @@ const Forms = () => {
                   htmlFor="is_student"
                   className="ml-2 text-sm font-medium text-gray-900 "
                 >
-                  Are you currently enrolled in a full-time undergraduate academic
-                  course?
+                  Enrolled in a full-time undergraduate academic
+                  course.
                 </label>
               </div>
               <div>
@@ -473,9 +473,6 @@ const Forms = () => {
                     Machine Learning Engineer
                   </option>
                   <option value="Network Engineer">Network Engineer</option>
-                  <option value="Other Role Not Listed">
-                    Other Role Not Listed
-                  </option>
                   <option value="Security Professional">
                     Security Professional
                   </option>
@@ -486,6 +483,9 @@ const Forms = () => {
                   <option value="SysAdmin">SysAdmin</option>
                   <option value="Technical Writer">Technical Writer</option>
                   <option value="Decline to specify">Decline to Specify</option>
+                  <option value="Other Role Not Listed">
+                    Other Role Not Listed
+                  </option>
                 </select>
               </div>
 
