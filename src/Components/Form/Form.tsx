@@ -207,7 +207,7 @@ const Forms = () => {
     }}
     else{
       console.log("errored")
-      alert("Please check all the fields")
+      alert("Please fill all the required fields!")
       // console.log(validation)
     }
   }
@@ -229,14 +229,14 @@ const Forms = () => {
                   htmlFor="fname"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Full name
+                  Full Name <p className="d-inline text-danger" >*</p>
                 </label>
                 <input
                   type="text"
                   id="fname"
                   name="fname"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="eg: John Doe"
+                  placeholder="John Doe"
                   required
                   onChange={(e) => {handleChange(e.target.name,e.target.value);
                     setValidation({...validation,fname:e.target.value ?(e.target.value.length>5 ? '' : 'Enter Full name'):"Name is Required"});
@@ -249,41 +249,41 @@ const Forms = () => {
                 {validation.fname && <p style={{ color: 'red' }}>{validation.fname}</p>}
                 
               </div>
-              <div>
+              <div className="mt-3">
                 <label
                   htmlFor="pccode"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Country Code
+                  Country Code <p className="d-inline text-danger" >*</p>
                 </label>
                 <input
                   type="tel"
                   id="pccode"
                   name ="pccode"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="eg: +91"
+                  placeholder="+91"
                   required
                   onChange={(e) => {
                     handleChange(e.target.name,e.target.value);
-                    setValidation({...validation,pccode:(e.target.value.trim() == "")?"Country code is Required":""});
+                    setValidation({...validation,pccode:(e.target.value.trim() == "")?"Country Code is Required":""});
                   }
                   // setName(e.target.value)
                   }
-                  onFocus={(e) => {setValidation({...validation,pccode:(e.target.value.trim() == "")?"Country code is Required":""});}}
+                  onFocus={(e) => {setValidation({...validation,pccode:(e.target.value.trim() == "")?"Country Code is Required":""});}}
                 />
                 {(validation.pccode) && <p style={{ color: 'red' }}>{validation.pccode}</p>}
                 <label
                   htmlFor="phone"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Phone number
+                  Phone Number <p className="d-inline text-danger" >*</p>
                 </label>
                 <input
                   type="tel"
                   id="phone"
                   name ="phone"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-4"
-                  placeholder="eg: 7412589631"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-2"
+                  placeholder="7412589631"
                   required
                   onChange={(e) => {
                     handleChange(e.target.name,e.target.value);
@@ -309,7 +309,7 @@ const Forms = () => {
                   htmlFor="is_wpNo"
                   className="ml-2 text-sm font-medium text-gray-900 "
                 >
-                  Is this your whatsapp Number?
+                  Is this your WhatsApp Number?
                 </label>
               </div>
               <div >
@@ -317,14 +317,14 @@ const Forms = () => {
                   htmlFor="wccode"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Country Code
+                  Country Code <p className="d-inline text-danger" >*</p>
                 </label>}
                 {wpno === "false" && <input
                   type="tel"
                   id="wccode"
                   name ="wccode"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="eg: +91"
+                  placeholder="+91"
                   required
                   onChange={(e) => {
                     handleChange(e.target.name,e.target.value);
@@ -337,16 +337,16 @@ const Forms = () => {
                 {(wpno === "false" && validation.wccode) && <p style={{ color: 'red' }}>{validation.wccode}</p>}
                 {wpno === "false" && <label
                   htmlFor="wpPhone"
-                  className="block mb-2 text-sm font-medium text-gray-900 "
+                  className="block text-sm font-medium text-gray-900 mt-3"
                 >
-                  Whatsapp number
+                  Whatsapp Number <p className="d-inline text-danger" >*</p>
                 </label>}
                 {wpno === "false" && <input
                   type="tel"
                   id="wpPhone"
                   name ="wpPhone"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-4"
-                  placeholder="eg: 7412589631"
+                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 mt-1 "
+                  placeholder="7412589631"
                   required
                   onChange={(e) => {
                     handleChange(e.target.name,e.target.value);
@@ -361,9 +361,9 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="pronoun"
-                  className="block text-sm font-medium text-gray-900 dark:text-gray-400"
+                  className="block text-sm font-medium text-gray-900"
                 >
-                  Preferred pronoun
+                  Preferred Pronoun <p className="d-inline text-danger" >*</p>
                 </label>
                 <select
                   id="pronoun"
@@ -404,14 +404,14 @@ const Forms = () => {
                   htmlFor="organization"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Organization/College
+                  Organization/College <p className="d-inline text-danger" >*</p>
                 </label>
                 <input
                   type="text"
                   id="organization"
                   name="organization"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="eg: Dunder Mifflin Paper Company, Inc."
+                  placeholder="Google"
                   required
                   onChange={(e) => {
                     handleChange(e.target.name,e.target.value);
@@ -428,14 +428,14 @@ const Forms = () => {
                   htmlFor="city"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Current City
+                  Current City <p className="d-inline text-danger" >*</p>
                 </label>
                 <input
                   type="text"
                   id="city"
                   name="city"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="eg: Pune"
+                  placeholder="Pune"
                   required
                   onChange={(e) => {
                     handleChange(e.target.name,e.target.value);
@@ -449,9 +449,9 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="role"
-                  className="block text-sm font-medium text-gray-900 dark:text-gray-400"
+                  className="block text-sm font-medium text-gray-900"
                 >
-                  Role
+                  Role <p className="d-inline text-danger" >*</p>
                 </label>
                 <select
                   id="role"
@@ -492,9 +492,9 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="about"
-                  className="mt-2 block text-sm font-medium text-gray-900 dark:text-gray-400"
+                  className="mt-2 block text-sm font-medium text-gray-900"
                 >
-                  About you
+                  About You <p className="d-inline text-danger" >*</p>
                 </label>
                 <textarea
                   id="about"
@@ -515,14 +515,15 @@ const Forms = () => {
                   htmlFor="linkedin"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  LinkedIn Profile URL
+                  LinkedIn Profile URL <p className="d-inline text-danger" >*</p>
+                  <p className="text-gray-400" >https://www.linkedin.com/in/yourprofile</p>
                 </label>
                 <input
                   type="url"
                   id="linkedin"
                   name="linkedin"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="eg:https://www.linkedin.com/in/johndoe/"
+                  placeholder="https://www.linkedin.com/in/johndoe/"
                   required
                   onChange={(e) => {handleChange(e.target.name,e.target.value);
                     setValidation({...validation,linkedin:e.target.value ?((e.target.value.substring(0,28) == "https://www.linkedin.com/in/") ? '' : 'Provide Valid Linkedin Profile'):"Linkedin Profile is Required"});
@@ -539,16 +540,17 @@ const Forms = () => {
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   GitHub Profile URL
+                  <p className="text-gray-400" >https://github.com/</p>
                 </label>
                 <input
                   type="url"
                   id="github"
                   name="github"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="eg: https://github.com/johndoe"
+                  placeholder="https://github.com/johndoe"
                   required
                   onChange={(e) => {handleChange(e.target.name,e.target.value);
-                    setValidation({...validation,github:e.target.value ?((e.target.value.substring(0,19) == "https://github.com/") ? '' : 'Provide a Valid Github Profile'):"Github Profile is Required"});
+                    setValidation({...validation,github:e.target.value ?((e.target.value.substring(0,19) == "https://github.com/") ? '' : 'Provide a Valid Github Profile'):""});
                     // setName(e.target.value)
                   }}
                 />
@@ -566,7 +568,7 @@ const Forms = () => {
                   type="url"
                   id="website"
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                  placeholder="eg:https://johndoe.com"
+                  placeholder="https://johndoe.com"
                   required
                   onChange={(e) => {
                     // console.log(e.target.value)
@@ -577,9 +579,9 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="diet"
-                  className="block text-sm font-medium text-gray-900 dark:text-gray-400"
+                  className="block text-sm font-medium text-gray-900"
                 >
-                  Dietary restrictions
+                  Dietary Restrictions <p className="d-inline text-danger" >*</p>
                 </label>
                 <select
                   id="diet"
@@ -603,9 +605,9 @@ const Forms = () => {
               <div>
                 <label
                   htmlFor="tshirt"
-                  className="block text-sm font-medium text-gray-900 dark:text-gray-400"
+                  className="block text-sm font-medium text-gray-900"
                 >
-                  T-shirt size
+                  T-Shirt Size <p className="d-inline text-danger" >*</p>
                 </label>
                 <select
                   id="tshirt"
@@ -643,7 +645,7 @@ const Forms = () => {
                     htmlFor="tnc_checkbox"
                     className="font-medium text-gray-900 "
                   >
-                    Agree to Terms and Conditions?
+                    Agree to Terms and Conditions? <p className="d-inline text-danger" >*</p>
                   </label>
                   <p
                     id="tnc_checkbox-text"
@@ -679,7 +681,7 @@ const Forms = () => {
                     htmlFor="application_checkbox"
                     className="font-medium text-gray-900 "
                   >
-                    Agree to ticketing terms?
+                    Agree to ticketing terms? <p className="d-inline text-danger" >*</p>
                   </label>
                   <p
                     id="application_checkbox-text"
