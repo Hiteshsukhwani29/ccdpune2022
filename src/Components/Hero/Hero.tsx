@@ -29,7 +29,7 @@ const Hero = () => {
             setRejected(true)
           }
           setApplied(true)
-          navigate('/ccd2022/dashboard')
+          //navigate('/ccd2022/dashboard')
         } else {
           // console.log('No such document!')
           // navigate('/ccd2022/rsvp')
