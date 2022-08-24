@@ -113,7 +113,7 @@ export default function Navbar({ active, handleClick }) {
               </>
               ) : (
                 <button
-                  className="mt-1 py-1.5 bg-blue-600 hover:bg-blue-700 text-white  px-4 border border-blue-500 hover:border-transparent rounded text-lg"
+                  className="mt-1 py-1.5  bg-blue-600 hover:bg-blue-700 text-white  px-4 border border-blue-500 hover:border-transparent rounded text-lg"
                   onClick={signInWithGoogle}
                 >
                   Login
@@ -121,10 +121,10 @@ export default function Navbar({ active, handleClick }) {
               )}
             </div>
 
-            <div className="md:hidden flex items-center space-x-2">
+            <div className="md:hidden flex items-center content-center space-x-2">
               {user ? null : (
                 <button
-                  className="mt-1 py-1.5 bg-blue-600 hover:bg-blue-700 text-white  px-4 border border-blue-500 hover:border-transparent rounded text-lg"
+                  className=" bg-blue-600 hover:bg-blue-700 text-white  px-3 border border-blue-500 hover:border-transparent rounded text-xs py-1"
                   onClick={signInWithGoogle}
                 >
                   Login

@@ -20,7 +20,7 @@ const Speakers = () => {
   return (
     <>
       <div id="speakers-grid" className="flex justify-center items-center flex-col px-5 pt-5">
-        <div className="text-2xl lg:text-3xl font-normal text-g-gray-8">
+        <div className="text-2xl text-center lg:text-3xl font-normal text-g-gray-8">
         Amazing Speaker Lineup is Comming Up!
         </div>
         <div className="text-base max-w-2xl w-fit text-center font-light text-g-gray-5 mt-2">
