@@ -1,6 +1,35 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
+import { db, auth } from '../../services/UserAuth'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { collection } from '@firebase/firestore';
+import { getDocs } from 'firebase/firestore';
+
 
 function Approval() {
+  const [user, loading]: any = useAuthState(auth)
+  // const equipment = collection(db, 'register')
+  // const snapshot = await getDocs(equipment);
+  // console.log(snapshot)
+  // let [result,setResult]:any = useState([])
+  const [result,setResult]:any = useState([])
+  const getData = async() => {
+      let temp:any = []
+      const registered = collection(db, 'register')
+      const snapshot = await getDocs(registered);
+      // let resultx:any = []
+      await snapshot.docs.map(doc => {temp.push(doc.data())});
+      console.log(result)
+      setResult(temp)
+      // setResult(resultx)
+      // result = await [{name:"Tushar 1", status:"trial"},{name:"Tushar 2", status:"trial"}]
+      // result = await results
+  }
+useEffect(()=>{
+  getData();
+  // console.log(result);
+  
+
+},[])
   return (
    <div className='contain'>
      <table className="table table-borderless table-hover ">
@@ -13,7 +42,18 @@ function Approval() {
     </tr>
   </thead>
   <tbody>
-    <tr>
+    
+      {result.map((item,index)=>{
+        // console.log(item);
+        
+          return (<tr>
+            <th scope="row">{index}</th>
+            <td key={index}>{item.name}</td>
+            <td key={index}>{item.organization}</td>
+                  </tr>)
+      })}
+    
+    {/* <tr>
       <th scope="row">1</th>
       <td>Mark</td> 
       <td>Otto</td>
@@ -30,9 +70,10 @@ function Approval() {
       <td>Larry</td>
       <td>the Bird</td>
       <td>@twitter</td>
-    </tr>
+    </tr> */}
   </tbody>
-</table>
+  
+    </table>
    </div>
   )
 }
