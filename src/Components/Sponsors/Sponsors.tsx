@@ -1,4 +1,6 @@
 import cfplogo from '../../Images/sessionize-logo.svg'
+import usmart from '../../Images/usmart.png'
+import danalitic from '../../Images/Danaliticlogo.png'
 
 const Sponsors = () => {
   return (
@@ -41,13 +43,26 @@ const Sponsors = () => {
       <section>
         <div className="relative items-center w-full px-5 mx-auto md:px-12 lg:px-24 max-w-7xl">
           <div className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3">
-          <a href="https://sessionize.com" className="no-underline" target="_blank">
+          <a href="https://sessionize.com" rel={"noreferrer"} className="no-underline" target="_blank">
             <div className="p-6">
-              <img className="object-cover object-center w-fit mb-8 rounded-xl" src={cfplogo} alt="blog" />
-              <h2 className="mb-8 text-xs font-semibold tracking-widest text-blue-600 uppercase">CFP Platform Sponsor</h2>
+              <img className="object-cover object-center w-fit mb-12 rounded-xl" src={cfplogo} alt="blog" />
+              <h2 className="mb-8 text-xs font-semibold tracking-widest text-blue-600 uppercase">CFS Platform Sponsor</h2>
             </div>
           </a>
+
+          <a href="https://www.u-smart.ai" rel={"noreferrer"} className="no-underline" target="_blank">
+            <div className="p-6">
+              <img className="object-cover object-center mb-3 rounded-xl" src={usmart} width={230} alt="blog" />
+              <h2 className="mb-8 text-xs font-semibold tracking-widest text-blue-600 uppercase">Communication Partner</h2>
+            </div>
+          </a>
+
+          <div className="p-6">
+              <img className="object-cover object-center w-fit mb-8 rounded-xl" src={danalitic} height={"20"} alt="blog" />
+              <h2 className="mb-8 text-xs font-semibold tracking-widest text-blue-600 uppercase">Technology Partner</h2>
+            </div>
           </div>
+          
         </div>
       </section>
 

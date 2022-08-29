@@ -29,7 +29,7 @@ const Hero = () => {
             setRejected(true)
           }
           setApplied(true)
-          // navigate('/ccd2022/dashboard')
+          //navigate('/ccd2022/dashboard')
         } else {
           // console.log('No such document!')
           // navigate('/ccd2022/rsvp')
@@ -73,16 +73,25 @@ const Hero = () => {
             <p className="text-4xl font-normal text-g-blue-3 mb-6">
               Cloud Community Days 2022
             </p>
-            <p className="text-base text-g-gray-6 mb-0">
+            <p className="text-base mb-0">
               A community organized cloud conference with industry experts presenting
               on exciting topics! Cloud Community Day is powered by a shared belief
               that when developers come together to exchange ideas, amazing things
               can happen.
             </p>
-            <p className="text-base pt-4 mb-0 text-g-gray-8">Organized By :</p>
+            <p className="text-base pt-4 mb-0 ">Organized By :</p>
             <img className="py-2 w-2/4" src={logo} alt="Logo" />
-            <p className="text-base mb-4 text-g-gray-8">
+            <p className="text-dark text-lg">
               Date: 24<sup className="mr-0.5">th</sup>September
+            <p 
+            className="text-dark text-lg">
+              Venue: <a 
+              className="no-underline" 
+              target={"_blank"}
+              rel={"noreferrer"}
+              href="https://g.page/ConradPune?share">
+              
+                Conrad Pune</a></p>
             </p>
             <div className="lg:w-fit md:w-full grid grid-cols-1 lg:grid-cols-1 gap-x-4 gap-y-3">
               {user ? (
@@ -99,36 +108,38 @@ const Hero = () => {
                       View Tickets
                     </button>
                   ) : (
-                    <button className="transition ease-in-out bg-yellow-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded">
+                    <button className="transition ease-in-out bg-yellow-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
+                    onClick={() => navigate('/ccd2022/dashboard')}>
                       Under Review
                     </button>
                   )
                 ) : (
                   <button
                     className="transition ease-in-out bg-yellow-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
-                    // onClick={() => navigate('/ccd2022/rsvp')}
+                    onClick={() => navigate('/ccd2022/rsvp')}
                   >
-                    Registrations Will Be Live Soon.!
+                    Apply for Ticket
                   </button>
                 )
               ) : (
                 <button
                   className="transition ease-in-out bg-blue-500 hover:bg-blue-600 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
-                  // onClick={signInWithGoogle}
+                  onClick={signInWithGoogle}
                 >
-                  Registrations Will Be Live Soon.!
+                  Reserve Your Seat
                 </button>
               )}
 
-              <p className='text-base mb-0 text-g-gray-8'>Want to be a speaker? Click the button below.</p>
+              <p className='text-dark mb-0 text-lg'>Want to be a speaker? Click the button below.</p>
               <a
                 className="transition ease-in-out  bg-gray-500 duration-300 text-center w-fit rounded disabled"
                 href="https://sessionize.com/ccd-pune"
+                rel={"noreferrer"}
                 target={'_blank'}
                 aria-disabled={true}
               >
                 <button className="text-white bg-green-600 h-fit w-fit text-base py-2 px-4 rounded">
-                  CFS Open
+                  Call For Speakers Open
                 </button>
                 
               </a>
@@ -140,8 +151,10 @@ const Hero = () => {
           <Countdown />
         </div>
       </div>
+                
     </>
   )
+  
 }
 
 export default Hero
