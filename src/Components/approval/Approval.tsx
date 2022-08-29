@@ -17,7 +17,7 @@ function Approval() {
       const registered = collection(db, 'register')
       const snapshot = await getDocs(registered);
       // let resultx:any = []
-      await snapshot.docs.map(doc => {temp.push(doc.data())});
+      // await snapshot.docs.map(doc => {temp.push(doc.data())});
       console.log(result)
       setResult(temp)
       // setResult(resultx)
@@ -42,17 +42,14 @@ useEffect(()=>{
     </tr>
   </thead>
   <tbody>
-    
       {result.map((item,index)=>{
-        // console.log(item);
-        
+          // console.log(item);
           return (<tr>
-            <th scope="row">{index}</th>
-            <td key={index}>{item.name}</td>
-            <td key={index}>{item.organization}</td>
+                    <th scope="row">{index}</th>
+                    <td key={index}>{item.name}</td>
+                    <td key={index}>{item.organization}</td>
                   </tr>)
       })}
-    
     {/* <tr>
       <th scope="row">1</th>
       <td>Mark</td> 
