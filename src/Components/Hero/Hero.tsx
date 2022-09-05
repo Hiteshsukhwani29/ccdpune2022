@@ -133,13 +133,13 @@ const Hero = () => {
               <p className='text-dark mb-0 text-lg'>Want to be a speaker? Click the button below.</p>
               <a
                 className="transition ease-in-out  bg-gray-500 duration-300 text-center w-fit rounded disabled"
-                href="https://sessionize.com/ccd-pune"
+                // href="https://sessionize.com/ccd-pune"
                 rel={"noreferrer"}
                 target={'_blank'}
                 aria-disabled={true}
               >
-                <button className="text-white bg-green-600 h-fit w-fit text-base py-2 px-4 rounded">
-                  Call For Speakers Open
+                <button className="text-white bg-green-600 h-fit w-fit text-base py-2 px-4 btn rounded" disabled>
+                  Call For Speakers Closed
                 </button>
                 
               </a>
