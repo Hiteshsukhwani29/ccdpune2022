@@ -11,7 +11,7 @@ const Sponsors = () => {
 
       <p className="mb-4 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
         We're thankful to all our sponsors who are making CCD 2022 Pune amazing. <br />
-        To become a sponsor, please email as at <a href="mailto:contact@gdgcloudpune.com">contact@gdgcloupune.com</a>
+        To become a sponsor, please email as at <a href="mailto:contact@gdgcloudpune.com">contact@gdgcloudpune.com</a>
       </p>
       <br />
       {/* <div className="max-w-sm mx-auto">
