@@ -2,7 +2,7 @@ import aitlogo from '../../Images/gdsc-ait-logo.png'
 import mitaoelogo from '../../Images/gdsc-mitaoe-logo.png'
 import i2itlogo from '../../Images/gdsc-i2it-logo.png'
 import bvplogo from '../../Images/gdsc-bvp-logo.png'
-import pvgcos from '../../ Images / gdsc-pvgcos-logo.png'
+import pvgcos from '../../Images/gdsc-pvgcos-logo.png'
 
 const Partners = () => {
   return (
@@ -33,7 +33,7 @@ const Partners = () => {
           target="_blank"
           rel="noreferrer"
               >
-                  <img src={i2itlogo} alt="logo" className="w-[220px]" />
+                  <img src={i2itlogo} alt="logo" className="w-[350px]" />
         </a>
         <a
           className="w-fit rounded cursor- pointer"
@@ -49,7 +49,7 @@ const Partners = () => {
           target="_blank"
           rel="noreferrer"
               >
-                  <img src={pvgcos} alt="logo" className="w-[220px]" />
+                  <img src={pvgcos} alt="logo" className="w-[100px]" />
         </a>
       </div>
     </div>

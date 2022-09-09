@@ -19,7 +19,7 @@ const Home = () => {
       <Coc />
       <FAQ />
       <Sponsors /> 
-       {/* <Partners /> */}
+        <Partners /> 
     </>
   )
 }
