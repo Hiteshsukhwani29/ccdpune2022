@@ -1,8 +1,8 @@
-import aitlogo from '../../Images/gdsc-ait-logo.png'
-import mitaoelogo from '../../Images/gdsc-mitaoe-logo.png'
-import i2itlogo from '../../Images/gdsc-i2it-logo.png'
-import bvplogo from '../../Images/gdsc-bvp-logo.png'
-import pvgcos from '../../Images/gdsc-pvgcos-logo.png'
+import aitlogo from '../../Images/ait.png'
+import mitaoelogo from '../../Images/mitaoe.png'
+import i2itlogo from '../../Images/i2it.png'
+import bvplogo from '../../Images/bvcoe.png'
+import pvgcos from '../../Images/pvg.png'
 
 const Partners = () => {
   return (
@@ -33,7 +33,7 @@ const Partners = () => {
           target="_blank"
           rel="noreferrer"
               >
-                  <img src={i2itlogo} alt="logo" className="w-[350px]" />
+                  <img src={i2itlogo} alt="logo" className="w-[220px]" />
         </a>
         <a
           className="w-fit rounded cursor- pointer"
@@ -49,7 +49,7 @@ const Partners = () => {
           target="_blank"
           rel="noreferrer"
               >
-                  <img src={pvgcos} alt="logo" className="w-[100px]" />
+                  <img src={pvgcos} alt="logo" className="w-[220px]" />
         </a>
       </div>
     </div>
