@@ -3,6 +3,7 @@ import mitaoelogo from '../../Images/mitaoe.png'
 import i2itlogo from '../../Images/i2it.png'
 import bvplogo from '../../Images/bvcoe.png'
 import pvgcos from '../../Images/pvg.png'
+import mescoe from '../../Images/mescoe.png'
 
 const Partners = () => {
   return (
@@ -34,6 +35,14 @@ const Partners = () => {
           rel="noreferrer"
               >
                   <img src={i2itlogo} alt="logo" className="w-[220px]" />
+        </a>
+        <a
+          className="w-fit rounded cursor- pointer"
+                  href="https://gdscmescoe.tech/"
+          target="_blank"
+          rel="noreferrer"
+              >
+                  <img src={mescoe} alt="logo" className="w-[220px]" />
         </a>
         <a
           className="w-fit rounded cursor- pointer"
