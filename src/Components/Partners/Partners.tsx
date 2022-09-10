@@ -1,10 +1,8 @@
-
-import nseclogo from '../../Images/gdsc-nsec-logo.png'
-import ciemlogo from '../../Images/gdsc-ciem-logo.png'
-import gcelogo from '../../Images/gdsc-gce-logo.png'
-import gecbsplogo from '../../Images/gdsc-gecbsp-logo.png'
-import sitlogo from '../../Images/gdsc-sit-logo.png'
-
+import aitlogo from '../../Images/gdsc-ait-logo.png'
+import mitaoelogo from '../../Images/gdsc-mitaoe-logo.png'
+import i2itlogo from '../../Images/gdsc-i2it-logo.png'
+import bvplogo from '../../Images/gdsc-bvp-logo.png'
+import pvgcos from '../../Images/gdsc-pvgcos-logo.png'
 
 const Partners = () => {
   return (
@@ -15,43 +13,43 @@ const Partners = () => {
       <div className=" w-fit my-4 space-y-2 lg:space-y-0 lg:gap-4 lg:grid lg:grid-cols-5 mx-handler">
         <a
           className="w-fit rounded cursor- pointer"
-          href="https://dscnsec.com/"
+          href="https://gdsc.community.dev/army-institute-of-technology-pune/"
           target="_blank"
           rel="noreferrer"
-        >
-          <img src={nseclogo} alt="logo" className="w-[220px]" />
+              >
+                  <img src={aitlogo} alt="logo" className="w-[220px]" />
         </a>
         <a
           className="w-fit rounded cursor- pointer"
-          href="https://dscciem.github.io/"
+                  href="https://gdsc.community.dev/bharati-vidyapeeth-deemed-university-college-of-engineering-pune/"
           target="_blank"
           rel="noreferrer"
-        >
-          <img src={ciemlogo} alt="logo" className="w-[220px]" />
+              >
+                  <img src={bvplogo} alt="logo" className="w-[220px]" />
         </a>
         <a
           className="w-fit rounded cursor- pointer"
-          href="https://gdscsit2021.github.io/"
+          href="https://gdsc.community.dev/international-institute-of-information-technology-isquareit-pune//"
           target="_blank"
           rel="noreferrer"
-        >
-          <img src={sitlogo} alt="logo" className="w-[220px]" />
+              >
+                  <img src={i2itlogo} alt="logo" className="w-[350px]" />
         </a>
         <a
           className="w-fit rounded cursor- pointer"
-          href="https://twitter.com/DSC_GCE"
+                  href="https://gdscmitaoe.github.io/"
           target="_blank"
           rel="noreferrer"
-        >
-          <img src={gcelogo} alt="logo" className="w-[220px]" />
+              >
+                  <img src={mitaoelogo} alt="logo" className="w-[220px]" />
         </a>
         <a
           className="w-fit rounded cursor- pointer"
-          href="https://gdsc.community.dev/events/details/developer-student-clubs-government-engineering-college-bilaspur-presents-intro-to-kaggle-gdsc-gecsp/"
+                  href="https://developers.google.com/community/gdsc"
           target="_blank"
           rel="noreferrer"
-        >
-          <img src={gecbsplogo} alt="logo" className="w-[220px]" />
+              >
+                  <img src={pvgcos} alt="logo" className="w-[100px]" />
         </a>
       </div>
     </div>
