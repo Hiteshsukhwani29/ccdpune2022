@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import Socials from '../Socials/Socials'
-import Title from '../Title/Title'
-// import speakersData from './speakersData.json'
+import speakersData from './speakersData.json'
 
 const Speakers = () => {
   const [speakersDetails, setSpeakersDetails] = useState<any[]>([])
@@ -9,19 +8,25 @@ const Speakers = () => {
   const [modalData, setModalData]: any = useState([])
 
   useEffect(() => {
-    fetch('https://sessionize.com/api/v2/kirmfltc/view/Speakers')
+    setSpeakersDetails(speakersData)
+  }, [])
+
+  //Api data
+  
+  /*useEffect(() => {
+    fetch('https://sessionize.com/api/v2/61shkhfs/view/Speakers')
       .then((response) => response.json())
       .then((data) => {
         setSpeakersDetails(data)
       })
       .catch((error) => console.log(error))
-  }, [])
+  }, [])*/
 
   return (
     <>
-      <div id="speakers-grid" className="flex justify-center items-center flex-col px-5 pt-5">
-        <div className="text-2xl text-center lg:text-3xl font-normal text-g-gray-8">
-        Amazing Speaker Lineup is Coming Up!
+      <div className="flex justify-center items-center flex-col px-5 pt-5">
+        <div className="text-2xl lg:text-3xl font-normal text-g-gray-8">
+          Our Amazing Speakers
         </div>
         <div className="text-base max-w-2xl w-fit text-center font-light text-g-gray-5 mt-2">
           Hear from the Professionals who are building the future of cloud. Our
@@ -35,7 +40,7 @@ const Speakers = () => {
         style={{ gridAutoRows: '1fr' }}
         id="speakers-grid"
       >
-        {/* {speakersDetails.map((speaker, id) => (
+        {speakersDetails.map((speaker, id) => (
           <div
             key={id}
             className="flex w-full h-full flex-col rounded-2xl items-center border border-g-gray-8 p-4 transform hover:-translate-y-2 hover:shadow-xl transition duration-300"
@@ -48,7 +53,7 @@ const Speakers = () => {
               style={{
                 borderStyle: 'solid',
                 borderWidth: '4px',
-                borderColor: '#3d82f8 #e5443f #f9b923 #2ea94f'
+                borderColor: '#4C8EF5'
               }}
               className="inline-block h-36 w-36 rounded-full ring-2 ring-white"
               src={speaker.profilePicture}
@@ -62,7 +67,7 @@ const Speakers = () => {
             </div>
             <Socials links={[...speaker?.links]} />
           </div>
-        ))} */}
+        ))}
         {showModal ? (
           <>
             <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">

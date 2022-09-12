@@ -1,0 +1,43 @@
+[
+    {
+      "id": "21ae28a4-720f-4317-b318-37a0cf4afef0",
+      "firstName": "Anubhav",
+      "lastName": "Singh",
+      "fullName": "Anubhav Singh",
+      "bio": "A developer since the pre-Bootstrap era, Anubhav has over a decade of experience dealing with large-scale software complexities as a freelancer before embarking on his own AI startup venture. He has authored two books, \"Hands-on Python Deep Learning for Web” and “Mobile Deep Learning with TensorFlow Lite, ML Kit and Flutter”. He's also a Google Venkat Panchapakesan Memorial Scholar. Anubhav has been a contributor to several open-source projects and was a Google Summer of Code participant in 2019. He also leads the team at GDG Cloud Kolkata. You will often find him talking about System architecture, Machine Learning and the web.",
+      "tagLine": "CTO @ Dynopii Inc., Lead @ GDG Cloud Kolkata",
+      "profilePicture": "https://sessionize.com/image/261e-400o400o2-NicvRnjqkFE8c45DUHMoZC.jpg",
+      "sessions": [
+        {
+          "id": 376147,
+          "name": "Let’s Design a high availability ML heavy Cloud solution architecture"
+        }
+      ],
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/xprilion",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://linkedin.com/in/xprilion",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://xprilion.com",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/anubhav-singh",
+          "linkType": "Sessionize"
+        }
+      ],
+      "questionAnswers": [],
+      "categories": []
+    }
+  ]
+  
