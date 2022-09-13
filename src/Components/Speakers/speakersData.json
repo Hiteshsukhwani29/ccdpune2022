@@ -38,6 +38,55 @@
       ],
       "questionAnswers": [],
       "categories": []
+    },
+    {
+      "id": "6d31cddb-7268-4fab-81f2-bb66be131a30",
+      "firstName": "Bhisham",
+      "lastName": "Malani",
+      "fullName": "Bhisham Malani",
+      "bio": "\r\n14+ yrs of IT experience, played various roles ranging from tester in early days to automation architect, AI lead, Cloud platform and DevOps lead and currently the Architect in Capgemini working for leading banking client in APAC.. previous industry experience in Telecom for major telcos. Passionate about AI/ML and cloud. \r\n\r\nLinked In - www.linkedin.com/in/bhisham-malani/\r\n\r\nPlease get in touch in case you would like to know more… :)",
+      "tagLine": "Associate Director - Capegemini | FS I&D CDP - GCP Architect",
+      "profilePicture": "https://sessionize.com/image/de8c-400o400o2-SKZq4J22TCG739WFZUPZto.jpg",
+      "sessions": [
+        {
+          "id": 377692,
+          "name": "Google Architecture Diagramming tool and new features"
+        }
+      ],
+      "isTopSpeaker": false,
+      "links": [],
+      "questionAnswers": [],
+      "categories": []
+    },
+    {
+      "id": "26050ff2-9663-4a83-8470-aff2e9e21d2e",
+      "firstName": "Chetan",
+      "lastName": "Dixit",
+      "fullName": "Chetan Dixit",
+      "bio": "Seasoned Professional in designing , developing, and managing robust, secure, scalable, highly available data engineering solutions. Built teams and evangelized technology. Groomed teams to be high performing teams with new technology. Passionate about solving business problems with technology.",
+      "tagLine": "Data & Technology Evangelist",
+      "profilePicture": "https://sessionize.com/image/99bc-400o400o2-XLhYGx6Hx9ME79n6hjPLc6.jpg",
+      "sessions": [
+        {
+          "id": 377952,
+          "name": "Data Platforms on Google Cloud"
+        }
+      ],
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/chetandixit24/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/chetan-dixit",
+          "linkType": "Sessionize"
+        }
+      ],
+      "questionAnswers": [],
+      "categories": []
     }
   ]
   
