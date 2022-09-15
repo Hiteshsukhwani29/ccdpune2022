@@ -3,6 +3,8 @@ import mitaoelogo from '../../Images/mitaoe.png'
 import i2itlogo from '../../Images/i2it.png'
 import bvplogo from '../../Images/bvcoe.png'
 import pvgcos from '../../Images/pvg.png'
+import mescoe from '../../Images/mescoe.png'
+import neo4j from '../../Images/neo4j.svg'
 
 const Partners = () => {
   return (
@@ -11,6 +13,14 @@ const Partners = () => {
         Community Partners
       </div>
       <div className=" w-fit my-4 space-y-2 lg:space-y-0 lg:gap-4 lg:grid lg:grid-cols-5 mx-handler">
+      <a
+          className="w-fit rounded cursor- pointer"
+          href="https://community.neo4j.com/"
+          target="_blank"
+          rel="noreferrer"
+              >
+                  <img src={neo4j} alt="logo" className="w-[220px]" />
+        </a>
         <a
           className="w-fit rounded cursor- pointer"
           href="https://gdsc.community.dev/army-institute-of-technology-pune/"
@@ -34,6 +44,14 @@ const Partners = () => {
           rel="noreferrer"
               >
                   <img src={i2itlogo} alt="logo" className="w-[220px]" />
+        </a>
+        <a
+          className="w-fit rounded cursor- pointer"
+                  href="https://gdscmescoe.tech/"
+          target="_blank"
+          rel="noreferrer"
+              >
+                  <img src={mescoe} alt="logo" className="w-[220px]" />
         </a>
         <a
           className="w-fit rounded cursor- pointer"
