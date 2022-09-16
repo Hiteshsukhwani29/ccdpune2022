@@ -49,7 +49,7 @@ const Hero = () => {
           setTicket(true)
         }
 
-        console.log(response["status"])
+        // console.log(response["status"])
       }
     }
 
