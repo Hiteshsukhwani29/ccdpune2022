@@ -1,6 +1,7 @@
 import cfplogo from '../../Images/sessionize-logo.svg'
 import usmart from '../../Images/usmart.png'
 import danalitic from '../../Images/Danaliticlogo.png'
+import er from '../../Images/er.png'
 
 const Sponsors = () => {
   return (
@@ -25,17 +26,17 @@ const Sponsors = () => {
           </div>
         </a>
       </div> */}
-      {/* <div className="max-w-sm mx-auto">
-      <a href="https://wandb.ai" className="no-underline" target="_blank">
+      <div className="max-w-sm mx-auto">
+      <a href="https://www.elastic.run/" className="no-underline" target="_blank" rel="noreferrer">
         <div className="m-8 bg-white overflow-hidden rounded-lg shadow-lg">
-          <img className="object-cover object-center w-fit px-4 py-16 mx-auto" src="/ccd2022/sponsors/wandb.svg" alt="avatar" />
+          <img className="object-cover object-center w-fit px-4 py-16 mx-auto" src={er} alt="Elastic Run Logo" />
 
-          <div className="flex items-center px-6 py-2 bg-yellow-400 text-center justify-center">
-            <h1 className="mx-3 text-lg font-semibold text-black">Gold Sponsor</h1>
+          <div className="flex items-center px-6 py-2 bg-gray-400 text-center justify-center">
+            <h1 className="mx-3 text-lg font-semibold text-black">Silver Sponsor</h1>
           </div>
         </div>
       </a>
-      </div> */}
+      </div>
       {/* <div className="flex justify-center md:justify-start text-2xl lg:text-xl font-light text-g-blue-3 mt-16">
         Also backed by
       </div> */}
