@@ -39,17 +39,17 @@ const Hero = () => {
 
     async function TicketID() {
       if (applied) {
-        const docRef = doc(db, 'tickets', user.uid)
-        const docSnap = await getDoc(docRef)
-        if (docSnap.exists()) {
-          if (docSnap.data().conference || docSnap.data().workshop) {
-            setTicket(true)
-          } else {
-            setTicket(false)
-          }
-        } else {
-          console.log('No such document!')
+        let url = "https://api.gdgcloudpune.com/getStatus?collection=register&uid=" + user.uid
+        // console.log(url)
+        let response = await fetch(url).then((res) => {return res.json()} );
+        if(response["status"] == "rejected"){
+          setRejected(true)
         }
+        else if(response["status"] == "generated"){
+          setTicket(true)
+        }
+
+        console.log(response["status"])
       }
     }
 
