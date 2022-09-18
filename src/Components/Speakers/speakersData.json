@@ -1,92 +1,201 @@
 [
-    {
-      "id": "21ae28a4-720f-4317-b318-37a0cf4afef0",
-      "firstName": "Anubhav",
-      "lastName": "Singh",
-      "fullName": "Anubhav Singh",
-      "bio": "A developer since the pre-Bootstrap era, Anubhav has over a decade of experience dealing with large-scale software complexities as a freelancer before embarking on his own AI startup venture. He has authored two books, \"Hands-on Python Deep Learning for Web” and “Mobile Deep Learning with TensorFlow Lite, ML Kit and Flutter”. He's also a Google Venkat Panchapakesan Memorial Scholar. Anubhav has been a contributor to several open-source projects and was a Google Summer of Code participant in 2019. He also leads the team at GDG Cloud Kolkata. You will often find him talking about System architecture, Machine Learning and the web.",
-      "tagLine": "CTO @ Dynopii Inc., Lead @ GDG Cloud Kolkata",
-      "profilePicture": "https://sessionize.com/image/261e-400o400o2-NicvRnjqkFE8c45DUHMoZC.jpg",
-      "sessions": [
-        {
-          "id": 376147,
-          "name": "Let’s Design a high availability ML heavy Cloud solution architecture"
-        }
-      ],
-      "isTopSpeaker": false,
-      "links": [
-        {
-          "title": "Twitter",
-          "url": "https://twitter.com/xprilion",
-          "linkType": "Twitter"
-        },
-        {
-          "title": "LinkedIn",
-          "url": "https://linkedin.com/in/xprilion",
-          "linkType": "LinkedIn"
-        },
-        {
-          "title": "Blog",
-          "url": "https://xprilion.com",
-          "linkType": "Blog"
-        },
-        {
-          "title": "Sessionize",
-          "url": "https://sessionize.com/anubhav-singh",
-          "linkType": "Sessionize"
-        }
-      ],
-      "questionAnswers": [],
-      "categories": []
-    },
-    {
-      "id": "6d31cddb-7268-4fab-81f2-bb66be131a30",
-      "firstName": "Bhisham",
-      "lastName": "Malani",
-      "fullName": "Bhisham Malani",
-      "bio": "\r\n14+ yrs of IT experience, played various roles ranging from tester in early days to automation architect, AI lead, Cloud platform and DevOps lead and currently the Architect in Capgemini working for leading banking client in APAC.. previous industry experience in Telecom for major telcos. Passionate about AI/ML and cloud. \r\n\r\nLinked In - www.linkedin.com/in/bhisham-malani/\r\n\r\nPlease get in touch in case you would like to know more… :)",
-      "tagLine": "Associate Director - Capegemini | FS I&D CDP - GCP Architect",
-      "profilePicture": "https://sessionize.com/image/de8c-400o400o2-SKZq4J22TCG739WFZUPZto.jpg",
-      "sessions": [
-        {
-          "id": 377692,
-          "name": "Google Architecture Diagramming tool and new features"
-        }
-      ],
-      "isTopSpeaker": false,
-      "links": [],
-      "questionAnswers": [],
-      "categories": []
-    },
-    {
-      "id": "26050ff2-9663-4a83-8470-aff2e9e21d2e",
-      "firstName": "Chetan",
-      "lastName": "Dixit",
-      "fullName": "Chetan Dixit",
-      "bio": "Seasoned Professional in designing , developing, and managing robust, secure, scalable, highly available data engineering solutions. Built teams and evangelized technology. Groomed teams to be high performing teams with new technology. Passionate about solving business problems with technology.",
-      "tagLine": "Data & Technology Evangelist",
-      "profilePicture": "https://sessionize.com/image/99bc-400o400o2-XLhYGx6Hx9ME79n6hjPLc6.jpg",
-      "sessions": [
-        {
-          "id": 377952,
-          "name": "Data Platforms on Google Cloud"
-        }
-      ],
-      "isTopSpeaker": false,
-      "links": [
-        {
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/chetandixit24/",
-          "linkType": "LinkedIn"
-        },
-        {
-          "title": "Sessionize",
-          "url": "https://sessionize.com/chetan-dixit",
-          "linkType": "Sessionize"
-        }
-      ],
-      "questionAnswers": [],
-      "categories": []
-    }
-  ]
-  
+  {
+    "id": "21ae28a4-720f-4317-b318-37a0cf4afef0",
+    "firstName": "Anubhav",
+    "lastName": "Singh",
+    "fullName": "Anubhav Singh",
+    "bio": "A developer since the pre-Bootstrap era, Anubhav has over a decade of experience dealing with large-scale software complexities as a freelancer before embarking on his own AI startup venture. He has authored two books, \"Hands-on Python Deep Learning for Web” and “Mobile Deep Learning with TensorFlow Lite, ML Kit and Flutter”. He's also a Google Venkat Panchapakesan Memorial Scholar. Anubhav has been a contributor to several open-source projects and was a Google Summer of Code participant in 2019. He also leads the team at GDG Cloud Kolkata. You will often find him talking about System architecture, Machine Learning and the web.",
+    "tagLine": "CTO @ Dynopii Inc., Lead @ GDG Cloud Kolkata",
+    "profilePicture": "https://sessionize.com/image/261e-400o400o2-NicvRnjqkFE8c45DUHMoZC.jpg",
+    "sessions": [
+      {
+        "id": 376147,
+        "name": "Let’s Design a high availability ML heavy Cloud solution architecture"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/xprilion",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://linkedin.com/in/xprilion",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://xprilion.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/anubhav-singh",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "6d31cddb-7268-4fab-81f2-bb66be131a30",
+    "firstName": "Bhisham",
+    "lastName": "Malani",
+    "fullName": "Bhisham Malani",
+    "bio": "\r\n14+ yrs of IT experience, played various roles ranging from tester in early days to automation architect, AI lead, Cloud platform and DevOps lead and currently the Architect in Capgemini working for leading banking client in APAC.. previous industry experience in Telecom for major telcos. Passionate about AI/ML and cloud. \r\n\r\nLinked In - www.linkedin.com/in/bhisham-malani/\r\n\r\nPlease get in touch in case you would like to know more… :)",
+    "tagLine": "Associate Director - Capegemini | FS I&D CDP - GCP Architect",
+    "profilePicture": "https://sessionize.com/image/de8c-400o400o2-SKZq4J22TCG739WFZUPZto.jpg",
+    "sessions": [
+      {
+        "id": 377692,
+        "name": "Google Architecture Diagramming tool and new features"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "26050ff2-9663-4a83-8470-aff2e9e21d2e",
+    "firstName": "Chetan",
+    "lastName": "Dixit",
+    "fullName": "Chetan Dixit",
+    "bio": "Seasoned Professional in designing , developing, and managing robust, secure, scalable, highly available data engineering solutions. Built teams and evangelized technology. Groomed teams to be high performing teams with new technology. Passionate about solving business problems with technology.",
+    "tagLine": "Data & Technology Evangelist",
+    "profilePicture": "https://sessionize.com/image/99bc-400o400o2-XLhYGx6Hx9ME79n6hjPLc6.jpg",
+    "sessions": [
+      {
+        "id": 377952,
+        "name": "Data Platforms on Google Cloud"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/chetandixit24/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/chetan-dixit",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "9ba49328-e8f4-41ab-b477-31964eed842e",
+    "firstName": "Ghlen",
+    "lastName": "Nagels",
+    "fullName": "Ghlen Nagels",
+    "bio": "Ghlen Nagels is a Web Developer and Graph Database Consultant. He maintains the Neo4j PHP driver, helps with many other open source projects and is involved with multiple startups and corporate projects. You’ll likely find him running on the trails or enjoying some of his local favourite Belgian beers with his friends when he is not behind his keyboard.",
+    "tagLine": "Web Developer and Graph Database Consultant",
+    "profilePicture": "https://sessionize.com/image/2500-400o400o2-J4JcoTt9pAMrPgrBRT2rY2.jpg",
+    "sessions": [
+      {
+        "id": 383521,
+        "name": "Unlock Graph Databases with GCloud and Neo4J"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ghlennagels",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ghlen/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://medium.com/@ghlen",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/ghlen-nagels",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "f85512c0-af46-4083-b0bd-c5b8841399e9",
+    "firstName": "Jayesh",
+    "lastName": "Ahire",
+    "fullName": "Jayesh Ahire",
+    "bio": "Jayesh Ahire is the Founding Product Manager at TraceableAI where he runs API Security initiative. He is the AWS ML Hero, Twilio champion, and maintainer of varioud OSS Projects like OWASP crAPI, Hypertrace. He is the Organizer of API Security Global Community, AWS UG, Elastic UG, TensorFlow UG, and many other communities in India. His research interest involved Distributed neural computers and Defi. In his free time, he likes to read and he is learning to play the piano. ",
+    "tagLine": "Founding member of Product Management, TraceableAI",
+    "profilePicture": "https://sessionize.com/image/086d-400o400o2-c0-af46-4083-b0bd-c5b8841399e9.b0fe85e5-4149-4c5c-8c0a-000a5423565a.jpg",
+    "sessions": [
+      {
+        "id": 377608,
+        "name": "Do the Right thing, shift Left!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/jayesh_ahire1",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://linkedin.com/in/jayesh-ahire",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://dev.to/jbahire",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/jayesh",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "5e7de5da-81c1-4cf2-aefa-a5fc68a54b6a",
+    "firstName": "Murari",
+    "lastName": "Ramuka",
+    "fullName": "Murari Ramuka",
+    "bio": "Murari has extensively worked on Traditional and Modern data platforms having deep experience in Data Management, Data Architecture, Data Engineering, Data Science, Data Governance etc. In his past experiences at Microsoft, KPMG and HSBC, he led cloud data strategy/ implementation for multiple enterprise customers.\r\n\r\nHe has also authored a book on Data Analytics with Google Cloud Platform which is available on Amazon.\r\n\r\n I  love spreading knowledge among the community and am part of the Mentor for change program run by Niti Ayog (Govt of India).",
+    "tagLine": "Google, Data Analytics Specialist",
+    "profilePicture": "https://sessionize.com/image/b8f2-400o400o2-SXjSV68887FGF9b7oRfre.jpg",
+    "sessions": [
+      {
+        "id": 379695,
+        "name": "Discovering Data Values using Google Cloud Platform"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/murari-ramuka-98a440a/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/murari-ramuka",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  }
+]
