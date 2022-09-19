@@ -1,5 +1,40 @@
 [
   {
+    "id": "manual-addition",
+    "firstName": "Amey",
+    "lastName": "Nerkar",
+    "fullName": "Amey Nerkar",
+    "bio": "Amey is a social innovator and changemaker who enjoys building things that impact the community. He develops exceptional products and deploy those in the community around.!\n Amey is currently working as a Technical Product Manager and experienced in developing and managing the technical side of the products. He is a Google Cloud Certified Engineer and Facebook certified community manager. He is a full Time Technical Product Manager and loves to spend weekend over Music + Code!",
+    "tagLine": "Technical Product Manager",
+    "profilePicture": "../../Images/amey.jpg",
+    "sessions": [
+      {
+        "id": 379616,
+        "name": "Scaling up products with Cloud"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ameyinvent",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ameyinvent",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://medium.com/@amey.invent",
+        "linkType": "Blog"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "21ae28a4-720f-4317-b318-37a0cf4afef0",
     "firstName": "Anubhav",
     "lastName": "Singh",
@@ -54,7 +89,13 @@
       }
     ],
     "isTopSpeaker": false,
-    "links": [],
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/bhisham-malani/",
+        "linkType": "LinkedIn"
+      }
+    ],
     "questionAnswers": [],
     "categories": []
   },
@@ -193,6 +234,161 @@
         "title": "Sessionize",
         "url": "https://sessionize.com/murari-ramuka",
         "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "5c258814-b6d9-4086-bd66-4cb9f07e8181",
+    "firstName": "Navendu",
+    "lastName": "Pottekkat",
+    "fullName": "Navendu Pottekkat",
+    "bio": "Navendu Pottekkat works as a Developer Advocate for API7.ai. Navendu's passion for designing, developing, and deploying scalable, distributed systems is evident in each initiative he advances as an open source maintainer. He dedicates to helping new contributors to open source by mentoring through the Google Summer of Code and Linux Foundation Mentorship Program. Navendu writes and talks about the cloud native ecosystem and his experience in contributing to, building, scaling, and maintaining open source projects.",
+    "tagLine": "Developer Advocate at API7.ai",
+    "profilePicture": "https://sessionize.com/image/6e1f-400o400o2-fDFokyN8DAzjB7sVtc44x1.png",
+    "sessions": [
+      {
+        "id": 378406,
+        "name": "API Development Best Practices for a Cloud Native Future"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/sudo_navendu",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/navendup/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://api7.ai/",
+        "linkType": "Company_Website"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/navendu",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "92740e60-fe2a-4cb6-9254-cb6a718561ff",
+    "firstName": "Sathish",
+    "lastName": "VJ",
+    "fullName": "Sathish VJ",
+    "bio": "Sathish VJ is a Google Cloud Authorized Trainer, is recognized as a Google Developer Expert, and has held all Google Cloud technical certifications. He also runs a popular YouTube channel for learning Google Cloud technologies - youtube.com/AwesomeGCP.",
+    "tagLine": "Google Cloud 13x certified, Tech Architect, Investor",
+    "profilePicture": "https://sessionize.com/image/877b-400o400o2-BmWgrKxeH5NcqHaztKQHnu.png",
+    "sessions": [
+      {
+        "id": 376299,
+        "name": "Working with Streaming Data on Google Cloud"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/sathishvj",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/sathishvj/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://sathishvj.medium.com/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/sathish-vj",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "d3469e78-7d62-4945-be1f-b9b3cc4a134b",
+    "firstName": "Shree",
+    "lastName": "Bhagwat",
+    "fullName": "Shree Bhagwat",
+    "bio": "Founder of Codeaamy: An App development Company. \r\n\r\nFlutter Tech Editor,  Video Course Creator and Lead mentor at Raywenderlich.com. \r\n\r\nCorporate Trainer For Flutter\r\n\r\nPublic Speaker, Youtuber and blogger. \r\n\r\nOn a mission to make education free.",
+    "tagLine": "Founder /  CEO - Codeaamy",
+    "profilePicture": "https://sessionize.com/image/64ce-400o400o2-R85CieTsRwCgpfDp1DtuM5.png",
+    "sessions": [
+      {
+        "id": 380328,
+        "name": "Remote Config for App Personalisation"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/shreebhagwat94",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/shrihriday/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://www.instagram.com/codeaamy/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/shree-bhagwat",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "2a6f45ab-2175-4f39-b612-007f0f8e2262",
+    "firstName": "Vaibhav",
+    "lastName": "Malpani",
+    "fullName": "Vaibhav Malpani",
+    "bio": "Python developer at incedo inc. \r\nOrganizer at GDG cloud Mumbai.",
+    "tagLine": "Python developer at incedo inc.",
+    "profilePicture": "https://sessionize.com/image/7b9a-400o400o2-SvLSzFZbYs5H3x8iPz6Ac3.jpg",
+    "sessions": [
+      {
+        "id": 377808,
+        "name": "Zero to hero in machine learning using autoML tables"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/IVaibhavMalpani",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ivaibhavmalpani/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://medium.com/vaibhav-malpanis-blog",
+        "linkType": "Blog"
       }
     ],
     "questionAnswers": [],
