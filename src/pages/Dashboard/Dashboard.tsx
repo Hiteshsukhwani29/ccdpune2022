@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { db, auth } from '../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { getDoc, doc } from 'firebase/firestore'
-import { getStorage, ref, listAll, getDownloadURL } from 'firebase/storage'
-import Title from '../../Components/Title/Title'
+// import { getStorage, ref, listAll, getDownloadURL } from 'firebase/storage'
+// import Title from '../../Components/Title/Title'
 
 const Dashboard = () => {
   const [user, loading]: any = useAuthState(auth)
@@ -39,17 +39,17 @@ const Dashboard = () => {
 
     async function TicketID() {
       if (applied) {
-        const docRef = doc(db, 'tickets', user.uid)
-        const docSnap = await getDoc(docRef)
-        if (docSnap.exists()) {
-          if (docSnap.data().conference || docSnap.data().workshop) {
-            setTicket(true)
-          } else {
-            setTicket(false)
-          }
-        } else {
-          console.log('No such document!')
+        let url = "https://api.gdgcloudpune.com/getStatus?collection=register&uid=" + user.uid
+        // console.log(url)
+        let response = await fetch(url).then((res) => {return res.json()} );
+        if(response["status"] == "rejected"){
+          setRejected(true)
         }
+        else if(response["status"] == "generated"){
+          setTicket(true)
+        }
+
+        // console.log(response["status"])
       }
     }
 
@@ -78,11 +78,13 @@ const Dashboard = () => {
               {user ? (
                 applied ? (
                   rejected ? (<>
-                    Oops, we could not find a seat for you this time. However, we would love to see you attend it virtually! <br /> Virtual Event applications starting soon!
+                    Oops, we could not find a seat for you this time. You can try for our next events. Keep following us on social media for further updates!
                   </>
                   ) : ticket ? (<>
-                    Congratulations on making it through hundreds of applications! <br />
-                    We look forward to see you at the Cloud Community Days. <br /><br />
+                    <h4>
+                      Congratulations on making it through hundreds of applications! <br />
+                      We look forward to see you at the Cloud Community Days. <br /><br />
+                    </h4>
                     <button
                       className="transition ease-in-out bg-red-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
                       onClick={() => navigate('/ccd2022/tickets')}
