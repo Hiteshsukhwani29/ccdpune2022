@@ -5,6 +5,7 @@ import bvplogo from '../../Images/bvcoe.png'
 import pvgcos from '../../Images/pvg.png'
 import mescoe from '../../Images/mescoe.png'
 import neo4j from '../../Images/neo4j.svg'
+import gdgpune from '../../Images/GDG-Pune.png'
 
 const Partners = () => {
   return (
@@ -13,7 +14,15 @@ const Partners = () => {
         Community Partners
       </div>
       <div className=" w-fit my-4 space-y-2 lg:space-y-0 lg:gap-4 lg:grid lg:grid-cols-5 mx-handler">
-      <a
+        <a
+          className="w-fit rounded cursor- pointer"
+          href="https://gdg.community.dev/gdg-pune/"
+          target="_blank"
+          rel="noreferrer"
+              >
+                  <img src={gdgpune} alt="logo" className="w-[220px]" />
+        </a>
+        <a
           className="w-fit rounded cursor- pointer"
           href="https://community.neo4j.com/"
           target="_blank"
