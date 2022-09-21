@@ -1,6 +1,31 @@
 [
   {
     "id": "45c0e172-e705-4dcd-bb7d-f441b983c300",
+    "firstName": "Ajitesh",
+    "lastName": "Kumar",
+    "fullName": "Ajitesh Kumar",
+    "bio": "Ajitesh is a Customer Engineer at Google Cloud , working with Select and BFSI Customers across India to help them build and succeed on Cloud. Ajitesh wears the hats of an InfraModernization and an Application Modernization CE at the same time. A developer from heart - Certified across GCP,AWS,Azure and Kubernetes , now working on Web3 and blockchain",
+    "tagLine": "Customer Engineer, Google Cloud",
+    "profilePicture": "https://drive.google.com/uc?id=1bj1jdjVkQhrWhQoLY1OPfh08lbAwroFk",
+    "sessions": [
+      {
+        "id": 386499,
+        "name": "Keynote"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ajiteshkumar/",
+        "linkType": "LinkedIn"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "45c0e172-e705-4dcd-bb7d-f441b983c300",
     "firstName": "Amey",
     "lastName": "Nerkar",
     "fullName": "Amey Nerkar",
@@ -140,6 +165,31 @@
     "categories": []
   },
   {
+    "id": "26050ff2-9663-4a83-8470-aff2e9e21d2e",
+    "firstName": "Chintan",
+    "lastName": "Shah",
+    "fullName": "Chintan Shah",
+    "bio": "Chintan is a Principal Engineer working on Data Analytics at Elastic Run. He has more than 18 years of experience across various Database technologies with keen interest in analytics and machine learning. For most of the part of his career, he has been associated with Infosys and its product subsidiary EdgeVerve.",
+    "tagLine": "Prinicipal Engineer, ElasticRun",
+    "profilePicture": "https://drive.google.com/uc?id=1jM6JTQp_zmY2nAzA8lcfGXBNmYh587K-",
+    "sessions": [
+      {
+        "id": 377952,
+        "name": "ElasticRun - Data driven deep reach Kirana platform"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/chintansshah/",
+        "linkType": "LinkedIn"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
     "id": "9ba49328-e8f4-41ab-b477-31964eed842e",
     "firstName": "Ghlen",
     "lastName": "Nagels",
@@ -185,7 +235,7 @@
     "lastName": "Ahire",
     "fullName": "Jayesh Ahire",
     "bio": "Jayesh Ahire is the Founding Product Manager at TraceableAI where he runs API Security initiative. He is the AWS ML Hero, Twilio champion, and maintainer of varioud OSS Projects like OWASP crAPI, Hypertrace. He is the Organizer of API Security Global Community, AWS UG, Elastic UG, TensorFlow UG, and many other communities in India. His research interest involved Distributed neural computers and Defi. In his free time, he likes to read and he is learning to play the piano. ",
-    "tagLine": "Founding member of Product Management, TraceableAI",
+    "tagLine": "Founding Product Manager, TraceableAI",
     "profilePicture": "https://sessionize.com/image/086d-400o400o2-c0-af46-4083-b0bd-c5b8841399e9.b0fe85e5-4149-4c5c-8c0a-000a5423565a.jpg",
     "sessions": [
       {
