@@ -1,5 +1,6 @@
 import Countdown from '../../Components/Countdown/Countdown'
 import logo from '../../Images/logo.png'
+import vada from '../../Images/Vada.svg'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { db, auth, signInWithGoogle } from '../../services/UserAuth'
@@ -150,7 +151,7 @@ const Hero = () => {
         </div>
 
         <div className="w-full mb-3 lg:w-1/2 lg:mb-0 ">
-          <Countdown />
+          <img src={vada} alt="Shanivar Wada" />
         </div>
       </div>
                 
