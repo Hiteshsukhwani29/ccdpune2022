@@ -1,9 +1,9 @@
-import Countdown from '../../Components/Countdown/Countdown'
-import logo from '../../Images/logo.png'
-import vada from '../../Images/Vada.svg'
+import Countdown from '../../../Components/Countdown/Countdown'
+import logo from '../../../Images/logo.png'
+import vada from '../../../Images/Vada.svg'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { db, auth, signInWithGoogle } from '../../services/UserAuth'
+import { db, auth, signInWithGoogle } from '../../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { getDoc, doc } from 'firebase/firestore'
 
@@ -72,7 +72,7 @@ const Hero = () => {
         <div className="w-full lg:w-1/2">
           <div>
             <p className="text-4xl font-normal text-g-blue-3 mb-6">
-              Cloud Community Days 2023
+              Cloud Community Days 2022
             </p>
             <p className="text-base mb-0">
               A community organized cloud conference with industry experts presenting

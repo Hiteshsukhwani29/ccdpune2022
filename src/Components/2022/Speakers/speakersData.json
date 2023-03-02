@@ -1,0 +1,457 @@
+[
+  {
+    "id": "45c0e172-e705-4dcd-bb7d-f441b983c300",
+    "firstName": "Ajitesh",
+    "lastName": "Kumar",
+    "fullName": "Ajitesh Kumar",
+    "bio": "Ajitesh is a Customer Engineer at Google Cloud , working with Select and BFSI Customers across India to help them build and succeed on Cloud. Ajitesh wears the hats of an InfraModernization and an Application Modernization CE at the same time. A developer from heart - Certified across GCP,AWS,Azure and Kubernetes , now working on Web3 and blockchain",
+    "tagLine": "Customer Engineer, Google Cloud",
+    "profilePicture": "https://drive.google.com/uc?id=1bj1jdjVkQhrWhQoLY1OPfh08lbAwroFk",
+    "sessions": [
+      {
+        "id": 386499,
+        "name": "Keynote"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ajiteshkumar/",
+        "linkType": "LinkedIn"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "45c0e172-e705-4dcd-bb7d-f441b983c300",
+    "firstName": "Amey",
+    "lastName": "Nerkar",
+    "fullName": "Amey Nerkar",
+    "bio": "Amey is a social innovator and changemaker who enjoys building things that impact the community. He develops exceptional products and deploys those in the community around him. He is featured by Google for the impact he is creating using the technology!\r\n\r\nAmey is currently working as a Technical Product Manager and is experienced in developing and managing the technical side of the products. He is a Google Cloud Certified Engineer and Facebook certified community manager. He is a full-time Technical Product Manager and loves spending weekends over Music + Code!",
+    "tagLine": "Innovator | Technical Product Manager | GDG Organiser",
+    "profilePicture": "https://sessionize.com/image/7df6-400o400o2-Y37fhfz9iS1S1CsNrV65ms.jpg",
+    "sessions": [
+      {
+        "id": 386499,
+        "name": "scaling UP products with CLOUD ☁️"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ameyinvent",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ameyinvent/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Instagram",
+        "url": "https://www.instagram.com/amey.invent/",
+        "linkType": "Instagram"
+      },
+      {
+        "title": "Blog",
+        "url": "https://ameyinvent.in",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/amey-nerkar",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "21ae28a4-720f-4317-b318-37a0cf4afef0",
+    "firstName": "Anubhav",
+    "lastName": "Singh",
+    "fullName": "Anubhav Singh",
+    "bio": "A developer since the pre-Bootstrap era, Anubhav has over a decade of experience dealing with large-scale software complexities as a freelancer before embarking on his own AI startup venture. He has authored two books, \"Hands-on Python Deep Learning for Web” and “Mobile Deep Learning with TensorFlow Lite, ML Kit and Flutter”. He's also a Google Venkat Panchapakesan Memorial Scholar. Anubhav has been a contributor to several open-source projects and was a Google Summer of Code participant in 2019. He also leads the team at GDG Cloud Kolkata. You will often find him talking about System architecture, Machine Learning and the web.",
+    "tagLine": "CTO @ Dynopii Inc., Lead @ GDG Cloud Kolkata",
+    "profilePicture": "https://sessionize.com/image/261e-400o400o2-NicvRnjqkFE8c45DUHMoZC.jpg",
+    "sessions": [
+      {
+        "id": 376147,
+        "name": "Let’s Design a high availability ML heavy Cloud solution architecture"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/xprilion",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://linkedin.com/in/xprilion",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://xprilion.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/anubhav-singh",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "6d31cddb-7268-4fab-81f2-bb66be131a30",
+    "firstName": "Bhisham",
+    "lastName": "Malani",
+    "fullName": "Bhisham Malani",
+    "bio": "\r\n14+ yrs of IT experience, played various roles ranging from tester in early days to automation architect, AI lead, Cloud platform and DevOps lead and currently the Architect in Capgemini working for leading banking client in APAC.. previous industry experience in Telecom for major telcos. Passionate about AI/ML and cloud. \r\n\r\nLinked In - www.linkedin.com/in/bhisham-malani/\r\n\r\nPlease get in touch in case you would like to know more… :)",
+    "tagLine": "Associate Director - Capegemini | FS I&D CDP - GCP Architect",
+    "profilePicture": "https://sessionize.com/image/de8c-400o400o2-SKZq4J22TCG739WFZUPZto.jpg",
+    "sessions": [
+      {
+        "id": 377692,
+        "name": "Google Architecture Diagramming tool and new features"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/bhisham-malani/",
+        "linkType": "LinkedIn"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "26050ff2-9663-4a83-8470-aff2e9e21d2e",
+    "firstName": "Chetan",
+    "lastName": "Dixit",
+    "fullName": "Chetan Dixit",
+    "bio": "Seasoned Professional in designing , developing, and managing robust, secure, scalable, highly available data engineering solutions. Built teams and evangelized technology. Groomed teams to be high performing teams with new technology. Passionate about solving business problems with technology.",
+    "tagLine": "Data & Technology Evangelist",
+    "profilePicture": "https://sessionize.com/image/99bc-400o400o2-XLhYGx6Hx9ME79n6hjPLc6.jpg",
+    "sessions": [
+      {
+        "id": 377952,
+        "name": "Data Platforms on Google Cloud"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/chetandixit24/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/chetan-dixit",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "26050ff2-9663-4a83-8470-aff2e9e21d2e",
+    "firstName": "Chintan",
+    "lastName": "Shah",
+    "fullName": "Chintan Shah",
+    "bio": "Chintan is a Principal Engineer working on Data Analytics at Elastic Run. He has more than 18 years of experience across various Database technologies with keen interest in analytics and machine learning. For most of the part of his career, he has been associated with Infosys and its product subsidiary EdgeVerve.",
+    "tagLine": "Prinicipal Engineer, ElasticRun",
+    "profilePicture": "https://drive.google.com/uc?id=1jM6JTQp_zmY2nAzA8lcfGXBNmYh587K-",
+    "sessions": [
+      {
+        "id": 377952,
+        "name": "ElasticRun - Data driven deep reach Kirana platform"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/chintansshah/",
+        "linkType": "LinkedIn"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "9ba49328-e8f4-41ab-b477-31964eed842e",
+    "firstName": "Ghlen",
+    "lastName": "Nagels",
+    "fullName": "Ghlen Nagels",
+    "bio": "Ghlen Nagels is a Web Developer and Graph Database Consultant. He maintains the Neo4j PHP driver, helps with many other open source projects and is involved with multiple startups and corporate projects. You’ll likely find him running on the trails or enjoying some of his local favourite Belgian beers with his friends when he is not behind his keyboard.",
+    "tagLine": "Web Developer and Graph Database Consultant",
+    "profilePicture": "https://sessionize.com/image/2500-400o400o2-J4JcoTt9pAMrPgrBRT2rY2.jpg",
+    "sessions": [
+      {
+        "id": 383521,
+        "name": "Unlock Graph Databases with GCloud and Neo4J"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ghlennagels",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ghlen/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://medium.com/@ghlen",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/ghlen-nagels",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "f85512c0-af46-4083-b0bd-c5b8841399e9",
+    "firstName": "Jayesh",
+    "lastName": "Ahire",
+    "fullName": "Jayesh Ahire",
+    "bio": "Jayesh Ahire is the Founding Product Manager at TraceableAI where he runs API Security initiative. He is the AWS ML Hero, Twilio champion, and maintainer of varioud OSS Projects like OWASP crAPI, Hypertrace. He is the Organizer of API Security Global Community, AWS UG, Elastic UG, TensorFlow UG, and many other communities in India. His research interest involved Distributed neural computers and Defi. In his free time, he likes to read and he is learning to play the piano. ",
+    "tagLine": "Founding Product Manager, TraceableAI",
+    "profilePicture": "https://sessionize.com/image/086d-400o400o2-c0-af46-4083-b0bd-c5b8841399e9.b0fe85e5-4149-4c5c-8c0a-000a5423565a.jpg",
+    "sessions": [
+      {
+        "id": 377608,
+        "name": "Do the Right thing, shift Left!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/jayesh_ahire1",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://linkedin.com/in/jayesh-ahire",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://dev.to/jbahire",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/jayesh",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "5e7de5da-81c1-4cf2-aefa-a5fc68a54b6a",
+    "firstName": "Murari",
+    "lastName": "Ramuka",
+    "fullName": "Murari Ramuka",
+    "bio": "Murari has extensively worked on Traditional and Modern data platforms having deep experience in Data Management, Data Architecture, Data Engineering, Data Science, Data Governance etc. In his past experiences at Microsoft, KPMG and HSBC, he led cloud data strategy/ implementation for multiple enterprise customers.\r\n\r\nHe has also authored a book on Data Analytics with Google Cloud Platform which is available on Amazon.\r\n\r\n I  love spreading knowledge among the community and am part of the Mentor for change program run by Niti Ayog (Govt of India).",
+    "tagLine": "Google, Data Analytics Specialist",
+    "profilePicture": "https://sessionize.com/image/b8f2-400o400o2-SXjSV68887FGF9b7oRfre.jpg",
+    "sessions": [
+      {
+        "id": 379695,
+        "name": "Discovering Data Values using Google Cloud Platform"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/murari-ramuka-98a440a/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/murari-ramuka",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "5c258814-b6d9-4086-bd66-4cb9f07e8181",
+    "firstName": "Navendu",
+    "lastName": "Pottekkat",
+    "fullName": "Navendu Pottekkat",
+    "bio": "Navendu Pottekkat works as a Developer Advocate for API7.ai. Navendu's passion for designing, developing, and deploying scalable, distributed systems is evident in each initiative he advances as an open source maintainer. He dedicates to helping new contributors to open source by mentoring through the Google Summer of Code and Linux Foundation Mentorship Program. Navendu writes and talks about the cloud native ecosystem and his experience in contributing to, building, scaling, and maintaining open source projects.",
+    "tagLine": "Developer Advocate at API7.ai",
+    "profilePicture": "https://sessionize.com/image/6e1f-400o400o2-fDFokyN8DAzjB7sVtc44x1.png",
+    "sessions": [
+      {
+        "id": 378406,
+        "name": "API Development Best Practices for a Cloud Native Future"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/sudo_navendu",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/navendup/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://api7.ai/",
+        "linkType": "Company_Website"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/navendu",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "92740e60-fe2a-4cb6-9254-cb6a718561ff",
+    "firstName": "Sathish",
+    "lastName": "VJ",
+    "fullName": "Sathish VJ",
+    "bio": "Sathish VJ is a Google Cloud Authorized Trainer, is recognized as a Google Developer Expert, and has held all Google Cloud technical certifications. He also runs a popular YouTube channel for learning Google Cloud technologies - youtube.com/AwesomeGCP.",
+    "tagLine": "Google Cloud 13x certified, Tech Architect, Investor",
+    "profilePicture": "https://sessionize.com/image/877b-400o400o2-BmWgrKxeH5NcqHaztKQHnu.png",
+    "sessions": [
+      {
+        "id": 376299,
+        "name": "Working with Streaming Data on Google Cloud"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/sathishvj",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/sathishvj/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://sathishvj.medium.com/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/sathish-vj",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "d3469e78-7d62-4945-be1f-b9b3cc4a134b",
+    "firstName": "Shree",
+    "lastName": "Bhagwat",
+    "fullName": "Shree Bhagwat",
+    "bio": "Founder of Codeaamy: An App development Company. \r\n\r\nFlutter Tech Editor,  Video Course Creator and Lead mentor at Raywenderlich.com. \r\n\r\nCorporate Trainer For Flutter\r\n\r\nPublic Speaker, Youtuber and blogger. \r\n\r\nOn a mission to make education free.",
+    "tagLine": "Founder /  CEO - Codeaamy",
+    "profilePicture": "https://sessionize.com/image/64ce-400o400o2-R85CieTsRwCgpfDp1DtuM5.png",
+    "sessions": [
+      {
+        "id": 380328,
+        "name": "Remote Config for App Personalisation"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/shreebhagwat94",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/shrihriday/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://www.instagram.com/codeaamy/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Sessionize",
+        "url": "https://sessionize.com/shree-bhagwat",
+        "linkType": "Sessionize"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  },
+  {
+    "id": "2a6f45ab-2175-4f39-b612-007f0f8e2262",
+    "firstName": "Vaibhav",
+    "lastName": "Malpani",
+    "fullName": "Vaibhav Malpani",
+    "bio": "Python developer at incedo inc. \r\nOrganizer at GDG cloud Mumbai.",
+    "tagLine": "Python developer at incedo inc.",
+    "profilePicture": "https://sessionize.com/image/7b9a-400o400o2-SvLSzFZbYs5H3x8iPz6Ac3.jpg",
+    "sessions": [
+      {
+        "id": 377808,
+        "name": "Zero to hero in machine learning using autoML tables"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/IVaibhavMalpani",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ivaibhavmalpani/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://medium.com/vaibhav-malpanis-blog",
+        "linkType": "Blog"
+      }
+    ],
+    "questionAnswers": [],
+    "categories": []
+  }
+]

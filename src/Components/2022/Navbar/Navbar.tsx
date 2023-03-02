@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 // import logo from '../../Images/logo.png';
 import logoNav from '../../Images/logo-nav.png'
-import { auth, logout, signInWithGoogle } from '../../services/UserAuth'
+import { auth, logout, signInWithGoogle } from '../../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, Navigate } from 'react-router-dom'
 
@@ -51,7 +51,7 @@ export default function Navbar({ active, handleClick }) {
                       ? 'py-3 px-2 text-g-blue-3 hover:text-blue-600 border-b-4 border-googleBlue transition duration-300 text-lg'
                       : 'py-3 px-2 text-g-gray-7 hover:text-g-gray-9 transition duration-300 text-lg'
                   }
-                  // onClick={() => handleClick('Home')}
+                  onClick={() => handleClick('Home')}
                 >
                   Home
                 </div>
@@ -60,9 +60,9 @@ export default function Navbar({ active, handleClick }) {
                   className={
                     active === 'Speakers'
                       ? 'py-3 px-2 text-g-blue-3 hover:text-blue-600 border-b-4 border-googleBlue transition duration-300 text-lg'
-                      : 'py-3 px-2 text-g-gray-5 hover:text-g-gray-5 transition duration-300 text-lg'
+                      : 'py-3 px-2 text-g-gray-7 hover:text-g-gray-9 transition duration-300 text-lg'
                   }
-                  // onClick={() => handleClick('Speakers')}
+                  onClick={() => handleClick('Speakers')}
                 >
                   Speakers
                 </div>
@@ -71,9 +71,9 @@ export default function Navbar({ active, handleClick }) {
                   className={
                     active === 'Schedule'
                       ? 'py-3 px-2 text-g-blue-3 hover:text-blue-600 border-b-4 border-googleBlue transition duration-300 text-lg'
-                      : 'py-3 px-2 text-g-gray-5 hover:text-g-gray-5 transition duration-300 text-lg'
+                      : 'py-3 px-2 text-g-gray-7 hover:text-g-gray-9 transition duration-300 text-lg'
                   }
-                  // onClick={() => handleClick('Schedule')}
+                  onClick={() => handleClick('Schedule')}
                 >
                   Schedule
                 </div>
@@ -91,7 +91,7 @@ export default function Navbar({ active, handleClick }) {
                       <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex={-1}>
                         <Link to="/ccd2022/dashboard" className='no-underline'>
                           <button
-                            // onClick={() => setProfileMenuOpen(false)}
+                            onClick={() => setProfileMenuOpen(false)}
                             className="block px-4 py-2 w-full text-sm text-gray-700  hover:bg-gray-100" role="menuitem" tabIndex={-1} id="user-menu-item-1"
                           >
                             Dashboard
@@ -113,7 +113,7 @@ export default function Navbar({ active, handleClick }) {
               </>
               ) : (
                 <button
-                  className="mt-1 py-1.5  bg-blue-600 hover:bg-blue-700 text-white  px-4 border border-blue-500 hover:border-transparent rounded text-lg hidden"
+                  className="mt-1 py-1.5  bg-blue-600 hover:bg-blue-700 text-white  px-4 border border-blue-500 hover:border-transparent rounded text-lg"
                   onClick={signInWithGoogle}
                 >
                   Login
@@ -121,10 +121,10 @@ export default function Navbar({ active, handleClick }) {
               )}
             </div>
 
-            <div className="md:hidden flex items-center content-center space-x-2 hidden">
+            <div className="md:hidden flex items-center content-center space-x-2">
               {user ? null : (
                 <button
-                  className="bg-blue-600 hover:bg-blue-700 text-white  px-3 border border-blue-500 hover:border-transparent rounded text-xs py-1"
+                  className=" bg-blue-600 hover:bg-blue-700 text-white  px-3 border border-blue-500 hover:border-transparent rounded text-xs py-1"
                   onClick={signInWithGoogle}
                 >
                   Login

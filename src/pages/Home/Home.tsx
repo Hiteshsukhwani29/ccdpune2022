@@ -1,4 +1,5 @@
 //import Navbar from '../../Components/Navbar/Navbar'
+import ComingSoon from '../../Components/ComingSoon/ComingSoon'
 import Hero from '../../Components/Hero/Hero'
 import Speakers from '../../Components/Speakers/Speakers'
 // import Team from '../../Components/Teams/Teams'
@@ -12,14 +13,15 @@ import Partners from '../../Components/Partners/Partners'
 const Home = () => {
   return (
     <>
-      <Hero />
+      {/* <Hero />
       <About />
-      <Speakers />
+      <Speakers />*/}
       {/* <Team /> */}
-      <Coc />
+      {/* <Coc />
       <FAQ />
       <Sponsors /> 
-      <Partners /> 
+      <Partners />   */}
+      <ComingSoon/>
     </>
   )
 }
