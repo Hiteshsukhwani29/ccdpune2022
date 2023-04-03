@@ -7,6 +7,7 @@ import {
   useLocation
 } from 'react-router-dom'
 import Home from './Home/Home'
+import Home2022 from './2022/Home/Home'
 import Forms from '../Components/Form/Form'
 import { auth } from '../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
@@ -72,6 +73,7 @@ export default function Navigation() {
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Home />} />
+        <Route path="/2022" element={<Home2022 />} />
         <Route path="/sessions" element={<Sessions />} />
         <Route path="/approval" element={<Approval/>} />
         <Route

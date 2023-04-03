@@ -12,7 +12,7 @@ const Speakers = () => {
   }, [])
 
   //Api data
-
+  
   /*useEffect(() => {
     fetch('https://sessionize.com/api/v2/61shkhfs/view/Speakers')
       .then((response) => response.json())
@@ -26,7 +26,7 @@ const Speakers = () => {
     <>
       <div className="flex justify-center items-center flex-col px-5 pt-5">
         <div className="text-2xl lg:text-3xl font-normal text-g-gray-8">
-          CCD Pune 2022 Speakers
+          Our Amazing Speakers
         </div>
         <div className="text-base max-w-2xl w-fit text-center font-light text-g-gray-5 mt-2">
           Hear from the Professionals who are building the future of cloud. Our

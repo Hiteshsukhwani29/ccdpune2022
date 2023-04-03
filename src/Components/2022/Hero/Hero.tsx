@@ -1,9 +1,9 @@
-import Countdown from '../../Components/Countdown/Countdown'
-import logo from '../../Images/logo.png'
-import vada from '../../Images/Vada.svg'
+import Countdown from '../../../Components/Countdown/Countdown'
+import logo from '../../../Images/logo.png'
+import vada from '../../../Images/Vada.svg'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { db, auth, signInWithGoogle } from '../../services/UserAuth'
+import { db, auth, signInWithGoogle } from '../../../services/UserAuth'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { getDoc, doc } from 'firebase/firestore'
 
@@ -40,16 +40,13 @@ const Hero = () => {
 
     async function TicketID() {
       if (applied) {
-        let url =
-          'https://api.gdgcloudpune.com/getStatus?collection=register&uid=' +
-          user.uid
+        let url = "https://api.gdgcloudpune.com/getStatus?collection=register&uid=" + user.uid
         // console.log(url)
-        let response = await fetch(url).then((res) => {
-          return res.json()
-        })
-        if (response['status'] == 'rejected') {
+        let response = await fetch(url).then((res) => {return res.json()} );
+        if(response["status"] == "rejected"){
           setRejected(true)
-        } else if (response['status'] == 'generated') {
+        }
+        else if(response["status"] == "generated"){
           setTicket(true)
         }
 
@@ -75,7 +72,7 @@ const Hero = () => {
         <div className="w-full lg:w-1/2">
           <div>
             <p className="text-4xl font-normal text-g-blue-3 mb-6">
-              Cloud Community Days 2023
+              Cloud Community Days 2022
             </p>
             <p className="text-base mb-0">
               A community organized cloud conference with industry experts presenting
@@ -85,7 +82,7 @@ const Hero = () => {
             </p>
             <p className="text-base pt-4 mb-0 ">Organized By :</p>
             <img className="py-2 w-2/4" src={logo} alt="Logo" />
-            {/* <p className="text-dark text-lg">
+            <p className="text-dark text-lg">
               Date: 24<sup className="mr-0.5">th</sup>September
             <p 
             className="text-dark text-lg">
@@ -96,27 +93,9 @@ const Hero = () => {
               href="https://g.page/ConradPune?share">
               
                 Conrad Pune</a></p>
-            </p> */}
-            <p className="text-dark text-lg">
-              Date:{' '}
-              <span className=" text-gray-500 text-lg">To be announced...</span>
-              <p className="text-dark text-lg">
-                Venue:{' '}
-                <a
-                  className="no-underline"
-                  target={'_blank'}
-                  rel={'noreferrer'}
-                  href="https://g.page/ConradPune?share"
-                >
-                  Conrad Pune
-                </a>
-              </p>
             </p>
             <div className="lg:w-fit md:w-full grid grid-cols-1 lg:grid-cols-1 gap-x-4 gap-y-3">
-              <button className="transition ease-in-out bg-blue-300 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded">
-                Registration Opening Soon
-              </button>
-              {/* {user ? (
+              {user ? (
                 applied ? (
                   rejected ? (
                     <button className="transition ease-in-out bg-black duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded">
@@ -152,9 +131,9 @@ const Hero = () => {
                 >
                   Applications Closed
                 </button>
-              )} */}
+              )}
 
-              {/*<p className='text-dark mb-0 text-lg'>Want to be a speaker? Click the button below.</p>
+               {/*<p className='text-dark mb-0 text-lg'>Want to be a speaker? Click the button below.</p>
               <a
                 className="transition ease-in-out  bg-gray-500 duration-300 text-center w-fit rounded disabled"
                 // href="https://sessionize.com/ccd-pune"
@@ -175,8 +154,10 @@ const Hero = () => {
           <img src={vada} alt="Shanivar Wada" />
         </div>
       </div>
+                
     </>
   )
+  
 }
 
 export default Hero

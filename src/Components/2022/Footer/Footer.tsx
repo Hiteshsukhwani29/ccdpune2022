@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 const Footer = () => {
   return (
     <div>
@@ -40,12 +38,7 @@ const Footer = () => {
                 ></path>
               </svg>
             </a> */}
-            <a
-              href="https://twitter.com/gdgcloudpune"
-              target="_blank"
-              className="mr-6 text-gray-600"
-              rel="noreferrer"
-            >
+            <a href="https://twitter.com/gdgcloudpune" target="_blank" className="mr-6 text-gray-600" rel="noreferrer">
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -88,8 +81,7 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/company/gdg-cloud-pune"
               className="mr-6 text-gray-600"
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noreferrer"
             >
               <svg
                 aria-hidden="true"
@@ -112,8 +104,7 @@ const Footer = () => {
             <a
               href="https://github.com/GDG-Cloud-Pune"
               className="text-g-gray-7 font-light no-underline"
-              target="_blank"
-              rel="noreferrer"
+              target="_blank" rel="noreferrer"
             >
               <svg
                 aria-hidden="true"
@@ -196,11 +187,6 @@ const Footer = () => {
                   Call for Speakers
                 </a>
               </p>
-              <Link to="/2022" className="no-underline">
-                <p className="mb-2 text-g-gray-7 font-light no-underline hover:text-[#0d6efd]">
-                  CCD 2022
-                </p>
-              </Link>
             </div>
             <div className="text-left w-fit">
               <h6 className="text-lg font-normal text-g-gray-8 mb-3 flex justify-left">
