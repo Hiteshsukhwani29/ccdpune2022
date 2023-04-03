@@ -27,7 +27,7 @@ const FAQ = () => {
             </a>
             . Any question related to participation can be asked at{' '}
             <a className="no-underline" href="mailto:contact@gdgcloudpune.com">
-            contact@gdgcloudpune.com
+              contact@gdgcloudpune.com
             </a>
             .
           </div>
@@ -42,7 +42,7 @@ const FAQ = () => {
         >
           <div className="flex items-center cursor-pointer ">
             <div className="ml-3 md:ml-4 lg:ml-6 md:text-lg  font-light">
-              <span>What is CCD 2022 Pune?</span>
+              <span>What is CCD 2023 Pune?</span>
             </div>
           </div>
           <div
@@ -51,9 +51,9 @@ const FAQ = () => {
           >
             <div className="text-gray-700   pl-3 md:pl-4 lg:pl-6 py-2 space-y-3">
               <div>
-                CCD 2022 Pune is short form of Cloud Community Days 2022 Pune
-                which is among the largest free Cloud developer conferences in
-                Western India.
+                CCD 2023 Pune is short form of Cloud Community Days 2023 Pune which
+                is among the largest free Cloud developer conferences in Western
+                India.
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ const FAQ = () => {
         >
           <div className="flex items-center cursor-pointer">
             <div className="ml-3 md:ml-4 lg:ml-6 md:text-lg font-light">
-              <span>Where can I find updates related to CCD 2022 Pune?</span>
+              <span>Where can I find updates related to CCD 2023 Pune?</span>
             </div>
           </div>
           <div
@@ -77,21 +77,22 @@ const FAQ = () => {
               <div>
                 <p className="mb-2 text-gray-500 ">
                   All announcements related to the event are posted to the GDG Cloud
-                  Pune chapter mailing list which you can join by Joining the
-                  chapter at -{' '}
+                  Pune chapter mailing list which you can join by Joining the chapter
+                  at -{' '}
                   <a href="https://gdg.community.dev/gdg-cloud-pune/">
                     GDG Cloud Pune Chapter Page
                   </a>
                   . You can receive the updates by following us on{' '}
                   <a href="https://twitter.com/gdgcloudpune">
                     Twitter (@gdgcloudpune)
-                  </a>.
+                  </a>
+                  .
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div
+        {/* <div
           className="item border-1 border-g-gray-3 rounded-md p-3 text-g-gray-7 hover:text-g-gray-9 hover:bg-g-gray-1"
           onClick={() => {
             questionClickHandler(2)
@@ -99,7 +100,7 @@ const FAQ = () => {
         >
           <div className="flex items-center cursor-pointer">
             <div className="ml-3 md:ml-4 lg:ml-6 md:text-lg font-light">
-              <span>How can I attend CCD 2022 Pune? How much does it cost?</span>
+              <span>How can I attend CCD 2023 Pune? How much does it cost?</span>
             </div>
           </div>
           <div
@@ -116,7 +117,7 @@ const FAQ = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div
           className="item border-1 border-g-gray-3 rounded-md p-3 text-g-gray-7 hover:text-g-gray-9 hover:bg-g-gray-1"
           onClick={() => {
@@ -138,8 +139,12 @@ const FAQ = () => {
             <div className="text-gray-700   pl-3 md:pl-4 lg:pl-6 py-2 space-y-3">
               <p className="mb-2 text-gray-500">
                 You can submit your talk/workshop proposal on our{' '}
-                <a href="https://sessionize.com/ccd-pune">CFS Page</a>.
-                The deadline for submitting CFS for this year’s conference is 31st
+                <a
+                // href="https://sessionize.com/ccd-pune"
+                >
+                  CFS Page
+                </a>
+                . The deadline for submitting CFS for this year’s conference is 31st
                 August, however, the earlier you submit, more the chances of us
                 reviewing your submission in depth.
               </p>
@@ -172,10 +177,8 @@ const FAQ = () => {
           </div>
         </div>
       </div>
-      <div>
-      </div>
+      <div></div>
     </div>
-    
   )
 }
 

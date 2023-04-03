@@ -30,13 +30,15 @@ export default function Navbar({ active, handleClick }) {
   return (
     <>
       <nav
-        className={`${scrolled ? 'shadow-lg bg-white/90' : ''} z-[100] fixed w-full fixed-top`}
+        className={`${
+          scrolled ? 'shadow-lg bg-white/90' : ''
+        } z-[100] fixed w-full fixed-top`}
       >
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between">
             <div className="flex space-x-7">
               <div>
-                <Link to="/ccd2022" className="flex items-center px-2 my-1.5">
+                <Link to="/" className="flex items-center px-2 my-1.5">
                   <img src={logoNav} alt="Logo" className="w-80 mr-2" />
                 </Link>
               </div>
@@ -78,39 +80,65 @@ export default function Navbar({ active, handleClick }) {
                   Schedule
                 </div>
               </div>
-              {user ? (<>
-                <div className="ml-3 relative">
-                  <div>
-                    <button type="button" className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true" onClick={() => setProfileMenuOpen(!profileMenuOpen)}>
-                      <span className="sr-only">Profile Menu</span>
-                      <img className="h-8 w-8 rounded-full" src={user.photoURL ? user.photoURL : ""} alt="" />
-                    </button>
-                  </div>
-                  {
-                    profileMenuOpen ? (
-                      <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex={-1}>
-                        <Link to="/ccd2022/dashboard" className='no-underline'>
+              {user ? (
+                <>
+                  <div className="ml-3 relative">
+                    <div>
+                      <button
+                        type="button"
+                        className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                        id="user-menu-button"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        onClick={() => setProfileMenuOpen(!profileMenuOpen)}
+                      >
+                        <span className="sr-only">Profile Menu</span>
+                        <img
+                          className="h-8 w-8 rounded-full"
+                          src={user.photoURL ? user.photoURL : ''}
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                    {profileMenuOpen ? (
+                      <div
+                        className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                        role="menu"
+                        aria-orientation="vertical"
+                        aria-labelledby="user-menu-button"
+                        tabIndex={-1}
+                      >
+                        <Link to="/ccd2022/dashboard" className="no-underline">
                           <button
                             // onClick={() => setProfileMenuOpen(false)}
-                            className="block px-4 py-2 w-full text-sm text-gray-700  hover:bg-gray-100" role="menuitem" tabIndex={-1} id="user-menu-item-1"
+                            className="block px-4 py-2 w-full text-sm text-gray-700  hover:bg-gray-100"
+                            role="menuitem"
+                            tabIndex={-1}
+                            id="user-menu-item-1"
                           >
                             Dashboard
                           </button>
                         </Link>
-                        <Link to="/ccd2022" className='no-underline'>
+                        <Link to="/ccd2022" className="no-underline">
                           <button
-
-                            className="block px-4 py-2 w-full text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabIndex={-1} id="user-menu-item-2"
-                            onClick={() => { logout(); setProfileMenuOpen(false); }}
+                            className="block px-4 py-2 w-full text-sm text-gray-700 hover:bg-gray-100"
+                            role="menuitem"
+                            tabIndex={-1}
+                            id="user-menu-item-2"
+                            onClick={() => {
+                              logout()
+                              setProfileMenuOpen(false)
+                            }}
                           >
                             Log Out
                           </button>
                         </Link>
                       </div>
-                    ) : (<></>)
-                  }
-                </div>
-              </>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                </>
               ) : (
                 <button
                   className="mt-1 py-1.5  bg-blue-600 hover:bg-blue-700 text-white  px-4 border border-blue-500 hover:border-transparent rounded text-lg hidden"
@@ -176,28 +204,33 @@ export default function Navbar({ active, handleClick }) {
                 Schedule
               </div>
             </li>
-            {user ? (<>
-              <hr />
-              <li onClick={() => {setIsOpen(false); setProfileMenuOpen(false)}}>
-                <Link to="/ccd2022/dashboard" className='no-underline'>
-                  <p
-                    className="block text-sm px-2 py-4 text-black font-semibold"
-                  >
-                    Dashboard
-                  </p>
-                </Link>
-              </li>
-              <li onClick={logout}>
-                <Link to="/ccd2022">
-                  <p
-                    className="block text-sm px-2 py-4 text-black font-semibold"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Log Out
-                  </p>
-                </Link>
-              </li>
-            </>) : (
+            {user ? (
+              <>
+                <hr />
+                <li
+                  onClick={() => {
+                    setIsOpen(false)
+                    setProfileMenuOpen(false)
+                  }}
+                >
+                  <Link to="/ccd2022/dashboard" className="no-underline">
+                    <p className="block text-sm px-2 py-4 text-black font-semibold">
+                      Dashboard
+                    </p>
+                  </Link>
+                </li>
+                <li onClick={logout}>
+                  <Link to="/ccd2022">
+                    <p
+                      className="block text-sm px-2 py-4 text-black font-semibold"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Log Out
+                    </p>
+                  </Link>
+                </li>
+              </>
+            ) : (
               ''
             )}
           </ul>
