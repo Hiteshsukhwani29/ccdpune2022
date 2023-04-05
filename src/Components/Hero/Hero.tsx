@@ -1,6 +1,6 @@
 import Countdown from '../../Components/Countdown/Countdown'
 import logo from '../../Images/logo.png'
-import vada from '../../Images/Vada.svg'
+import soon from '../../Images/comingSoon.png'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { db, auth, signInWithGoogle } from '../../services/UserAuth'
@@ -74,21 +74,21 @@ const Hero = () => {
       >
         <div className="w-full lg:w-1/2">
           <div>
-            <p className="text-4xl font-normal text-g-blue-3 mb-6">
+            <p className="mb-6 text-4xl font-normal text-g-blue-3">
               Cloud Community Days 2023
             </p>
-            <p className="text-base mb-0">
+            <p className="mb-0 text-base">
               A community organized cloud conference with industry experts presenting
               on exciting topics! Cloud Community Day is powered by a shared belief
               that when developers come together to exchange ideas, amazing things
               can happen.
             </p>
-            <p className="text-base pt-4 mb-0 ">Organized By :</p>
-            <img className="py-2 w-2/4" src={logo} alt="Logo" />
-            {/* <p className="text-dark text-lg">
+            <p className="pt-4 mb-0 text-base ">Organized By :</p>
+            <img className="w-2/4 py-2" src={logo} alt="Logo" />
+            {/* <p className="text-lg text-dark">
               Date: 24<sup className="mr-0.5">th</sup>September
             <p 
-            className="text-dark text-lg">
+            className="text-lg text-dark">
               Venue: <a 
               className="no-underline" 
               target={"_blank"}
@@ -97,47 +97,47 @@ const Hero = () => {
               
                 Conrad Pune</a></p>
             </p> */}
-            <p className="text-dark text-lg">
+            <p className="text-lg text-dark">
               Date:{' '}
-              <span className=" text-gray-500 text-lg">To be announced...</span>
-              <p className="text-dark text-lg">
+              <span className="text-lg text-gray-500 ">To Be Announced...</span>
+              <p className="text-lg text-dark">
                 Venue:{' '}
                 <a
                   className="no-underline"
                   target={'_blank'}
                   rel={'noreferrer'}
-                  href="https://g.page/ConradPune?share"
+                  // href="https://g.page/ConradPune?share"
                 >
-                  Conrad Pune
+                  To Be Announced...
                 </a>
               </p>
             </p>
-            <div className="lg:w-fit md:w-full grid grid-cols-1 lg:grid-cols-1 gap-x-4 gap-y-3">
-              <button className="transition ease-in-out bg-blue-300 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded">
+            <div className="grid grid-cols-1 lg:w-fit md:w-full lg:grid-cols-1 gap-x-4 gap-y-3">
+              <button className="px-4 py-2 text-base text-white transition duration-300 ease-in-out bg-blue-300 rounded h-fit w-fit">
                 Registration Opening Soon
               </button>
               {/* {user ? (
                 applied ? (
                   rejected ? (
-                    <button className="transition ease-in-out bg-black duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded">
+                    <button className="px-4 py-2 text-base text-white transition duration-300 ease-in-out bg-black rounded h-fit w-fit">
                       Not Selected
                     </button>
                   ) : ticket ? (
                     <button
-                      className="transition ease-in-out bg-red-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
+                      className="px-4 py-2 text-base text-white transition duration-300 ease-in-out bg-red-500 rounded h-fit w-fit"
                       onClick={() => navigate('/ccd2022/tickets')}
                     >
                       View Tickets
                     </button>
                   ) : (
-                    <button className="transition ease-in-out bg-yellow-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
+                    <button className="px-4 py-2 text-base text-white transition duration-300 ease-in-out bg-yellow-500 rounded h-fit w-fit"
                     onClick={() => navigate('/ccd2022/dashboard')}>
                       Under Review
                     </button>
                   )
                 ) : (
                   <button
-                    className="transition ease-in-out bg-gray-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded"
+                    className="px-4 py-2 text-base text-white transition duration-300 ease-in-out bg-gray-500 rounded h-fit w-fit"
                     //onClick={() => navigate('/ccd2022/rsvp')}
                     style={{cursor: "not-allowed"}}
                   >
@@ -146,7 +146,7 @@ const Hero = () => {
                 )
               ) : (
                 <button
-                  className="transition ease-in-out bg-gray-500 duration-300 text-white h-fit w-fit text-base py-2 px-4 rounded "
+                  className="px-4 py-2 text-base text-white transition duration-300 ease-in-out bg-gray-500 rounded h-fit w-fit "
                   style={{cursor: "not-allowed"}}
                   //onClick={signInWithGoogle}
                 >
@@ -154,15 +154,15 @@ const Hero = () => {
                 </button>
               )} */}
 
-              {/*<p className='text-dark mb-0 text-lg'>Want to be a speaker? Click the button below.</p>
+              {/*<p className='mb-0 text-lg text-dark'>Want to be a speaker? Click the button below.</p>
               <a
-                className="transition ease-in-out  bg-gray-500 duration-300 text-center w-fit rounded disabled"
+                className="text-center transition duration-300 ease-in-out bg-gray-500 rounded w-fit disabled"
                 // href="https://sessionize.com/ccd-pune"
                 rel={"noreferrer"}
                 target={'_blank'}
                 aria-disabled={true}
               >
-               <button className="text-white bg-green-600 h-fit w-fit text-base py-2 px-4 btn rounded" disabled>
+               <button className="px-4 py-2 text-base text-white bg-green-600 rounded h-fit w-fit btn" disabled>
                   Call For Speakers Closed
               </button>
                 
@@ -172,7 +172,7 @@ const Hero = () => {
         </div>
 
         <div className="w-full mb-3 lg:w-1/2 lg:mb-0 ">
-          <img src={vada} alt="Shanivar Wada" />
+          <img src={soon} alt="Shanivar Wada" />
         </div>
       </div>
     </>
