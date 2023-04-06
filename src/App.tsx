@@ -36,7 +36,12 @@ const Page = () => {
                 <img src={YoutubeIcon} className=" h-10 mx-2" />
               </a>
               <a href="https://www.instagram.com/gdgcloudpune/">
-                <img src={InstagramIcon} className=" h-10 mr-4 ml-2" />
+                <img src={InstagramIcon} className=" h-10 mx-2" />
+              </a>
+              <a href="https://sessionize.com/gccd23/">
+                <div className=" h-10 mr-4 ml-2 bg-black px-5 py-2 text-white rounded-full">
+                  Call for Speakers
+                </div>
               </a>
             </div>
           </div>
@@ -49,18 +54,25 @@ const Page = () => {
             <div className="font-sans font-semibold mb-5 text-center">
               Follow our socials to stay updated
             </div>
-            <div className="flex justify-center">
-              <a href="https://www.linkedin.com/company/gdg-cloud-pune/">
-                <img src={LinkedInIcon} className=" h-10 ml-4 mr-2" />
-              </a>
-              <a href="https://twitter.com/gdgcloudpune">
-                <img src={TwitterIcon} className=" h-10 mx-2" />
-              </a>
-              <a href="https://www.youtube.com/@gdgcloudpune9722">
-                <img src={YoutubeIcon} className=" h-10 mx-2" />
-              </a>
-              <a href="https://www.instagram.com/gdgcloudpune/">
-                <img src={InstagramIcon} className=" h-10 mr-4 ml-2" />
+            <div>
+              <div className="flex justify-center">
+                <a href="https://www.linkedin.com/company/gdg-cloud-pune/">
+                  <img src={LinkedInIcon} className=" h-10 ml-4 mr-2" />
+                </a>
+                <a href="https://twitter.com/gdgcloudpune">
+                  <img src={TwitterIcon} className=" h-10 mx-2" />
+                </a>
+                <a href="https://www.youtube.com/@gdgcloudpune9722">
+                  <img src={YoutubeIcon} className=" h-10 mx-2" />
+                </a>
+                <a href="https://www.instagram.com/gdgcloudpune/">
+                  <img src={InstagramIcon} className=" h-10 mr-4 ml-2" />
+                </a>
+              </div>
+              <a href="https://sessionize.com/gccd23/">
+                <div className="bg-black text-center py-2 text-white rounded-full mt-4">
+                  Call for Speakers
+                </div>
               </a>
             </div>
           </div>
