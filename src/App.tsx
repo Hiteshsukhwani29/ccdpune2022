@@ -13,31 +13,59 @@ import InstagramIcon from './Images/insta-icon.svg'
 import useWindowSize from './Hooks/useWindowSize'
 
 const Page = () => {
-  const size = useWindowSize();
-  console.log(size);
+  const size = useWindowSize()
+  // console.log(size)
   return (
     <>
-      <img src={ComingSoon} className=" m-auto h-screen" />
-      <img src={ComingSoonMobile} className=' m-auto h-screen'/>
-      <div className=" absolute bottom-10 left-0 right-0">
-        <div className="font-sans font-semibold mb-5 text-center">
-          Follow our socials to stay updated
-        </div>
-        <div className="flex justify-center">
-          <a href="https://www.linkedin.com/company/gdg-cloud-pune/">
-            <img src={LinkedInIcon} className=" h-10 ml-4 mr-2" />
-          </a>
-          <a href="https://twitter.com/gdgcloudpune">
-            <img src={TwitterIcon} className=" h-10 mx-2" />
-          </a>
-          <a href="https://www.youtube.com/@gdgcloudpune9722">
-            <img src={YoutubeIcon} className=" h-10 mx-2" />
-          </a>
-          <a href="https://www.instagram.com/gdgcloudpune/">
-            <img src={InstagramIcon} className=" h-10 mr-4 ml-2" />
-          </a>
-        </div>
-      </div>
+      {size.width != null && size.width > 600 ? (
+        <>
+          <img src={ComingSoon} className=" m-auto h-screen" />
+          {/* <img src={ComingSoonMobile} className=' m-auto h-screen'/> */}
+          <div className=" absolute bottom-10 left-0 right-0 flex flex-col items-center justify-center">
+            <div className="font-sans font-semibold mb-5 text-center">
+              Follow our socials to stay updated
+            </div>
+            <div className="flex justify-center">
+              <a href="https://www.linkedin.com/company/gdg-cloud-pune/">
+                <img src={LinkedInIcon} className=" h-10 ml-4 mr-2" />
+              </a>
+              <a href="https://twitter.com/gdgcloudpune">
+                <img src={TwitterIcon} className=" h-10 mx-2" />
+              </a>
+              <a href="https://www.youtube.com/@gdgcloudpune9722">
+                <img src={YoutubeIcon} className=" h-10 mx-2" />
+              </a>
+              <a href="https://www.instagram.com/gdgcloudpune/">
+                <img src={InstagramIcon} className=" h-10 mr-4 ml-2" />
+              </a>
+            </div>
+          </div>
+        </>
+      ) : (
+        <>
+          {/* <img src={ComingSoon} className=" m-auto h-screen" /> */}
+          <img src={ComingSoonMobile} className=" m-auto h-screen" />
+          <div className=" absolute bottom-0 top-0 left-0 right-0 flex flex-col items-center justify-center">
+            <div className="font-sans font-semibold mb-5 text-center">
+              Follow our socials to stay updated
+            </div>
+            <div className="flex justify-center">
+              <a href="https://www.linkedin.com/company/gdg-cloud-pune/">
+                <img src={LinkedInIcon} className=" h-10 ml-4 mr-2" />
+              </a>
+              <a href="https://twitter.com/gdgcloudpune">
+                <img src={TwitterIcon} className=" h-10 mx-2" />
+              </a>
+              <a href="https://www.youtube.com/@gdgcloudpune9722">
+                <img src={YoutubeIcon} className=" h-10 mx-2" />
+              </a>
+              <a href="https://www.instagram.com/gdgcloudpune/">
+                <img src={InstagramIcon} className=" h-10 mr-4 ml-2" />
+              </a>
+            </div>
+          </div>
+        </>
+      )}
       {/* <BrowserRouter>
         <Navigation />
       </BrowserRouter> */}
