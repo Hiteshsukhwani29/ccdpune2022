@@ -19,6 +19,7 @@ import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
 import { useEffect, useState } from 'react'
 import Approval from '../Components/approval/Approval'
+import ComingSoon from '../Components/ComingSoon/ComingSoon'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const [user] = useAuthState(auth)
@@ -69,12 +70,12 @@ export default function Navigation() {
   }
   return (
     <>
-      <Navbar active={activeTab} handleClick={navBarTabClickHandler} />
+      {/* <Navbar active={activeTab} handleClick={navBarTabClickHandler} /> */}
       <Routes>
         <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<ComingSoon />} />
         <Route path="/2022" element={<Home2022 />} />
-        <Route path="/sessions" element={<Sessions />} />
+        {/* <Route path="/sessions" element={<Sessions />} />
         <Route path="/approval" element={<Approval/>} />
         <Route
           path="/tickets"
@@ -91,9 +92,9 @@ export default function Navigation() {
         <Route
           path="/ccd2022/tickets"
           element={<PrivateRoute component={Tickets} />}
-        />
+        /> */}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
